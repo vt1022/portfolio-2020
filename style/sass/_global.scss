@@ -1,0 +1,30 @@
+::selection { color: turquoise; }
+
+:focus {@include focusState();}
+
+html {scroll-behavior: smooth;}
+body {background: linear-gradient(-80deg, $primaryBlack 0%, $primaryBlack 80%, $primaryColor 80%, $primaryColor 100%);background-repeat: no-repeat;}
+img {display: block;}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  margin: 0;
+  background: none;
+}
+
+a, p {
+  @include fontSize(36);
+}
+
+.wrapper {
+  max-width: 1600px;
+  width: 80%;
+  margin: 0 auto;
+}
