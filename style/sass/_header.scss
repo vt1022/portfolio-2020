@@ -1,7 +1,100 @@
 header {
 
   h1 {
-    @include fontLogo(20);
+    @include fontLogo(32);
   }
+  
+  // hamburger starts
+  
+  .nav {
+    
+    &__toggle-label {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+      transition: 0.5s;
+    }
+  
+    &__toggle-input{ display: none; }
 
+    /* hamburger starts */
+    &__links { 
+      position: absolute;
+      left: -200%;
+      top: 0;
+      right: 0;
+      
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+
+      transition: all 0.5s ease-in;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      height: 20px;
+      width: 6vw;
+      min-width: 30px;
+
+      transition: 0.5s ease;
+    }
+
+    .hamburger-lines {
+      align-self: flex-end;
+      width: 100%;
+      height: 3px;
+      border-radius: 4px;
+
+      background: $white;
+      transition: 0.5s ease 0.5s;
+
+      &:nth-child(1) { width: 70%; }
+      &:nth-child(3) { width: 40%; }
+    }
+
+    .hamburger:active .hamburger-lines { transform: translateY(-10px); }
+
+    /* hamburger animation starts */
+    &__toggle-input:checked + label > .hamburger {
+      transform: rotate(360deg);
+    }
+
+    &__toggle-input:checked + label > .hamburger > .line1 {
+      transform: rotate(45deg) translate(30px, 20px);
+      // border-radius: 30px;
+    }
+
+    &__toggle-input:checked + label > .hamburger > .line2 {
+      border: transparent;
+      transform: rotate(230deg) translate(-170px, -60px);
+      opacity: 0;
+    }
+
+    &__toggle-input:checked + label > .hamburger > .line3 {
+      transform: rotate(-45deg) translate(5px, 5px);
+      // border-radius: 30px;
+    }
+    /* hamburger animation ends */
+
+    &__toggle-input:checked ~ ul:first-of-type {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      
+      width: 100%;
+      height: auto;
+
+      background: $grey;
+    }
+
+    .hamburger:hover, .hamburger:focus { cursor: pointer; }
+    /* hamburger ends */
+  }
+  // hamburger ends
+  
 } // header

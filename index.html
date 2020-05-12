@@ -10,13 +10,13 @@
 </head>
 <body>
   <header class="wrapper">
-    <h1 class="logo">Vincci tsui</h1>
-    <nav>
+    <h1 class="logo">Vincci</h1>
+    <nav class="nav">
       <!-- skip link -->
       <a href="#main" class="skip-link visuallyHidden">skip to main content</a>
       <!-- hamburger checkbox starts -->
-      <input type="checkbox" id="toggle" name="toggle">
-      <label for="toggle" class="toggle">
+      <input type="checkbox" id="toggle" name="toggle" class="nav__toggle-input">
+      <label for="toggle" class="nav__toggle-label">
         <div class="hamburger">
           <div class="hamburger-lines line1"></div>
           <div class="hamburger-lines line2"></div>
@@ -24,31 +24,85 @@
         </div>
       </label>
       <!-- hamburger ends -->
-      <ul>  <!-- links and shit -->
-        <li><a href="index.html">Home</a></li>
+      <ul class="nav__links">  <!-- links and shit -->
+        <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <div class="about">
-      <nav class="about__nav">
-        <button class="about__right button">
-          <i class="fas fa-chevron-right"></i>
+  <div class="main-wrapper wrapper">
+    <main class="main">
+      <!-- nav up down arrows -->
+      <nav class="main__nav">
+        <button class="about__up button">
+          <i class="fas fa-chevron-up"></i>
         </button>
-        <button class="about__left button">
-          <i class="fas fa-chevron-left"></i>
+        <button class="about__down button">
+          <i class="fas fa-chevron-down"></i>
         </button>
       </nav>
 
-      <div class="about__container">
-        <!-- populate with js -->
-        <h2>designer turned dev</h2>
-      </div>
-    <div/> <!-- .about -->
-  </main>
+      <section class="about">
+        <div class="about__photo-container">
+          <img class="about__photo" src="./assets/portrait-photo.jpg" alt="">
+          <div class="about__body">
+            <h2 class="about__body-title">designer turned dev</h2>
+            <p class="about__body-text">
+              Hey! I'm Vincci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, obcaecati aut earum tenetur animi quas consequatur excepturi ipsam necessitatibus. Non harum maxime placeat voluptates, porro aut sed voluptas explicabo corporis nihil repellendus ipsum libero quidem beatae impedit recusandae dolores ad ratione. Voluptates recusandae mollitia tempora assumenda optio quas inventore nostrum?
+            </p>
+          </div>
+        </div>
+      <section/> <!-- .about -->
+      
+      <section class="projects-section">
+        <div class="projects">
+          <div class="projects__card">
+            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
+            <h3 class="card__title">Title</h3>
+            <p class="card__description">
+  
+            </p>
+            <ul class="card__languages">
+  
+            </ul>
+          </div>
+          <div class="projects__card">
+            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
+            <h3 class="card__title">Title</h3>
+            <p class="card__description">
+              
+            </p>
+            <ul class="card__languages">
+  
+            </ul>
+          </div>
+          <div class="projects__card">
+            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
+            <h3 class="card__title">Title</h3>
+            <p class="card__description">
+              
+            </p>
+            <ul class="card__languages">
+  
+            </ul>
+          </div>
+          <div class="projects__card">
+            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
+            <h3 class="card__title">Title</h3>
+            <p class="card__description">
+              
+            </p>
+            <ul class="card__languages">
+  
+            </ul>
+          </div>
+        </div> <!-- .projects__container-->
+        
+      </section> <!-- .projects -->
+    </main>
+  </div>
 
   <footer>
     <ul>

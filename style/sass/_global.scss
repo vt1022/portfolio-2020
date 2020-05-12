@@ -22,7 +22,7 @@ button {
 }
 
 a, p {
-  @include fontSize(36);
+  @include fontBody(17);
 }
 
 h1, h2, h3, p, a, span, i {

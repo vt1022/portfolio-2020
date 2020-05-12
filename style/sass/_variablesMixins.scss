@@ -1,17 +1,14 @@
 // variables
-
-$squareCardSize: 150px;
-
+// golden ratio phi:
+$phi: 1.6180339887498948482;
+$small-angle: 360 / ($phi + 1);    // 137.5
+$large-angle: 360 - $small-angle;  // 222.5
 // font colours + pseudo states
 $black: #000;
 $grey: #333333;
 $white: #f6f6f6;
-$primaryColor: #DC0A2D;
-$secondaryColor: #DC1570;
-
-// background colours
-$primaryBg: #f6f6f6;
-$accentBg: #dded9a;
+$color1: #644FBD;
+// $color1: rgb(120, 2, 255);
 
 // mixins
 
@@ -38,23 +35,25 @@ $accentBg: #dded9a;
   color: $color;
 }
 
-@mixin fontSans($size, $weight: 400, $color: $white) {
+@mixin fontBody($size, $weight: 400, $color: $white) {
   @include fontSize($size);
   font-family: 'Khula', sans-serif;
   // font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
   font-weight: $weight;
   color: $color;
 }
 
-@mixin fontSerif($size, $weight: 400, $color: $white) {
+@mixin fontTitle($size, $weight: 400, $color: $white) {
   @include fontSize($size);
-  font-family: 'Lora', serif;
+  font-family: 'Limelight', cursive;
+  // font-family: 'Saira Stencil One', cursive;
   font-weight: $weight;
   color: $color;
 }
 
 @mixin focusState() {
-    outline: 6px dotted $secondaryColor;
+    outline: 2px dashed $white;
 }
 
 // might be useful

@@ -1,38 +1,104 @@
-.about {
-  $navButtonSize: 40px;
-  
-  position: relative;
-  top: 15vh;
+.main-wrapper {
+  height: 100vh;
+}
 
-  height: 55vh;
-  max-width: 60%;
+.main {
+  $nav-btn-size: 40px;
+  position: relative;
+  top: 3%;
+
   padding: 15px 15px 0 0;
   border-top: 1px solid $white;
   border-right: 1px solid $white;
   margin: 0 auto;
+  margin-left: 10%;
 
-  .about__nav {
+  &__nav {
     @include flexCenter;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
     position: absolute;
     bottom: -1px;
     left: 100%;
     background: $black;
     
-    height: ($navButtonSize * 2 + 5px);
+    height: ($nav-btn-size * 2 + $nav-btn-size);
+    width: ($nav-btn-size + $nav-btn-size / 3);
     border: 1px solid $white;
     border-left: none;
-
+  
     .button {
       @include fontSize(11);
+      align-self: flex-start;
       display: block;
-      height: $navButtonSize;
-      width: $navButtonSize;
+      height: $nav-btn-size;
+      width: $nav-btn-size;
       border: 2px solid $white;
       border-radius: 50%;
     }
   }
+}
+
+.about {
   
+  &__photo-container {
+    display: flex;
+    // background: $grey;
+  }
+  
+  &__photo {
+    width: 50% / $phi;
+  } 
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    height: 100%;
+    width: 100% - 50% / $phi;
+    padding: (1px * $phi) (10px * $phi);
+    padding-right: 0;
+  
+    &-text {
+      margin-top: 0;
+    }
+
+    &-title {
+      @include fontTitle(24);
+      position: relative;
+      width: 115%;
+      right: 15%;
+      background: $color1;
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__card {
+    width: calc( 50% - 1rem);
+    margin-top: 2rem;
+  }
+
+  .card {
+    &__img {
+      width: 100%;
+    }
+  
+    &__title {
+
+    }
+  
+    &__description {
+  
+    }
+  
+    &__languages {
+  
+    }
+  } //card
 }
