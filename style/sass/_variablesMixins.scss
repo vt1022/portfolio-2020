@@ -3,16 +3,14 @@
 $squareCardSize: 150px;
 
 // font colours + pseudo states
-$primaryBlack: #2e2e2e;
-$secondaryBlack: #333333;
-$primaryWhite: #f6f6f6;
-$secondaryWhite: #ccc;
+$black: #000;
+$grey: #333333;
+$white: #f6f6f6;
 $primaryColor: #DC0A2D;
 $secondaryColor: #DC1570;
 
 // background colours
 $primaryBg: #f6f6f6;
-$secondaryBg: $secondaryWhite;
 $accentBg: #dded9a;
 
 // mixins
@@ -31,14 +29,24 @@ $accentBg: #dded9a;
   font-size: ($sizeValue/10) * 1rem;
 }
 
-@mixin fontSans($size, $weight: 700, $color: $primaryBlack) {
+@mixin fontLogo($size, $weight: 400, $color: $white) {
   @include fontSize($size);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Major Mono Display', monospace;
+  // font-family: 'Limelight', cursive;
+  // font-family: 'Saira Stencil One', cursive;
   font-weight: $weight;
   color: $color;
 }
 
-@mixin fontSerif($size, $weight: 400, $color: $primaryBlack) {
+@mixin fontSans($size, $weight: 400, $color: $white) {
+  @include fontSize($size);
+  font-family: 'Khula', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin fontSerif($size, $weight: 400, $color: $white) {
   @include fontSize($size);
   font-family: 'Lora', serif;
   font-weight: $weight;

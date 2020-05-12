@@ -1,3 +1,7 @@
-.header {
-  
-}
+header {
+
+  h1 {
+    @include fontLogo(20);
+  }
+
+} // header

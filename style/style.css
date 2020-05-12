@@ -279,13 +279,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: linear-gradient(-80deg, #2e2e2e 0%, #2e2e2e 80%, #DC0A2D 80%, #DC0A2D 100%);
-  background-repeat: no-repeat;
-}
-
 img {
   display: block;
+}
+
+body {
+  background: #000;
 }
 
 ul, ol, li {
@@ -306,8 +305,67 @@ a, p {
   font-size: 3.6rem;
 }
 
+h1, h2, h3, p, a, span, i {
+  color: #f6f6f6;
+}
+
 .wrapper {
   max-width: 1600px;
   width: 80%;
   margin: 0 auto;
+}
+
+header h1 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 400;
+  color: #f6f6f6;
+}
+
+.about {
+  position: relative;
+  top: 15vh;
+  height: 55vh;
+  max-width: 60%;
+  padding: 15px 15px 0 0;
+  border-top: 1px solid #f6f6f6;
+  border-right: 1px solid #f6f6f6;
+  margin: 0 auto;
+}
+
+.about .about__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: -1px;
+  left: 100%;
+  background: #000;
+  height: 85px;
+  border: 1px solid #f6f6f6;
+  border-left: none;
+}
+
+.about .about__nav .button {
+  font-size: 11px;
+  font-size: 1.1rem;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #f6f6f6;
+  border-radius: 50%;
 }

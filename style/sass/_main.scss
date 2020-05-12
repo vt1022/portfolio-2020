@@ -1,3 +1,38 @@
-.main {
+.about {
+  $navButtonSize: 40px;
+  
+  position: relative;
+  top: 15vh;
+
+  height: 55vh;
+  max-width: 60%;
+  padding: 15px 15px 0 0;
+  border-top: 1px solid $white;
+  border-right: 1px solid $white;
+  margin: 0 auto;
+
+  .about__nav {
+    @include flexCenter;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    position: absolute;
+    bottom: -1px;
+    left: 100%;
+    background: $black;
+    
+    height: ($navButtonSize * 2 + 5px);
+    border: 1px solid $white;
+    border-left: none;
+
+    .button {
+      @include fontSize(11);
+      display: block;
+      height: $navButtonSize;
+      width: $navButtonSize;
+      border: 2px solid $white;
+      border-radius: 50%;
+    }
+  }
   
 }

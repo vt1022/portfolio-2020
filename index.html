@@ -3,13 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ffe844f662.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Limelight&family=Major+Mono+Display&family=Open+Sans:wght@300;400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./style/style.css">
   <title>vincci the dev</title>
 </head>
 <body>
-  <h1>Vincci Tsui</h1>
-  <h2>portfolio coming soon...</h2>
+  <header class="wrapper">
+    <h1 class="logo">Vincci tsui</h1>
+    <nav>
+      <!-- skip link -->
+      <a href="#main" class="skip-link visuallyHidden">skip to main content</a>
+      <!-- hamburger checkbox starts -->
+      <input type="checkbox" id="toggle" name="toggle">
+      <label for="toggle" class="toggle">
+        <div class="hamburger">
+          <div class="hamburger-lines line1"></div>
+          <div class="hamburger-lines line2"></div>
+          <div class="hamburger-lines line3"></div>
+        </div>
+      </label>
+      <!-- hamburger ends -->
+      <ul>  <!-- links and shit -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <div class="about">
+      <nav class="about__nav">
+        <button class="about__right button">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="about__left button">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </nav>
+
+      <div class="about__container">
+        <!-- populate with js -->
+        <h2>designer turned dev</h2>
+      </div>
+    <div/> <!-- .about -->
+  </main>
+
+  <footer>
+    <ul>
+      <!-- socials. remember aria labels -->
+    </ul>
+  </footer>
+  <!-- scripts -->
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <script src="./script.js"></script>
 </body>
 </html>

@@ -1,10 +1,12 @@
 ::selection { color: turquoise; }
 
 :focus {@include focusState();}
-
 html {scroll-behavior: smooth;}
-body {background: linear-gradient(-80deg, $primaryBlack 0%, $primaryBlack 80%, $primaryColor 80%, $primaryColor 100%);background-repeat: no-repeat;}
 img {display: block;}
+
+body {
+  background: $black;
+}
 
 ul, ol, li {
   padding: 0;
@@ -21,6 +23,10 @@ button {
 
 a, p {
   @include fontSize(36);
+}
+
+h1, h2, h3, p, a, span, i {
+  color: $white;
 }
 
 .wrapper {
