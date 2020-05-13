@@ -1,0 +1,24 @@
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  // border-left: 40px solid $color1;
+  justify-content: space-between;
+  // align-items: flex-start;
+
+  .skill {
+    height: 50px;
+    margin: 0 auto;
+    filter: grayscale(1);
+  }
+
+  &__card {
+    width: calc(20% - 2rem);
+    min-width: 150px;
+    margin: 1rem;
+
+    p {
+      margin: 5px auto;
+      text-align: center;
+    }
+  }
+}

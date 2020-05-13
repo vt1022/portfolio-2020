@@ -1,0 +1,115 @@
+.contact {
+  display: flex;
+
+  &__thanks {
+    width: 50%;
+  }
+
+  form {
+    width: 50%;
+    font-size: 0;
+
+    > div {
+      position: relative;
+      margin-bottom: 2rem;
+
+      &::before {
+        @include pseudo;
+        top: initial;
+        bottom: 0;
+        // z-index: 1000;
+        height: 5px;
+        width: 8px;
+        background: $grey;
+        transition: all 0.5s ease-in;
+      }
+
+      &:focus-within::before {
+        left: calc(100% - 8px);
+        background: $white;
+      }
+    }
+  }
+
+  input:focus + label,
+  textarea:focus + label {
+    @include fontSize(9);
+    top: 100%;
+    background: transparent;
+  }
+
+  input, 
+  textarea {
+    display: block;
+    position: relative;
+    @include fontBody(16);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $grey;
+    transition: all 0.3s ease-in;
+
+    &:required {
+      box-shadow:none;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $white;
+    }
+
+    &:valid + label {
+      @include fontSize(9);
+      background: none;
+      top: 100%;
+    }
+  }
+  
+
+  label {
+    @include fontBody(16);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 6px;
+    height: 1.4em;
+    background: $black;
+    transition: all 0.3s ease-in;
+  }
+
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  button {
+    @include fontBody(16);
+    position: relative;
+    width: 100%;
+    border: 1px solid $grey;
+    padding-top: 4px;
+    transition: all 0.3s ease-in;
+
+    &::before {
+      @include pseudo;
+      top: initial;
+      bottom: 0;
+      height: 3px;
+      width: 8px;
+      background: $grey;
+      transition: all 0.5s ease-in;
+    }
+
+    &:hover, &:focus {
+      border: 1px solid $white;
+
+      &::before {
+        left: calc(100% - 8px);
+        background: $white;
+      }
+    }
+  }
+}

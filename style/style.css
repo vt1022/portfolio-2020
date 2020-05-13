@@ -296,6 +296,14 @@ button {
   background: none;
 }
 
+section:not(.hero-section) {
+  margin: 300px 0;
+}
+
+section:nth-of-type(2) {
+  margin-top: 0;
+}
+
 .ascii {
   font-size: 16px;
   font-size: 1.6rem;
@@ -315,6 +323,7 @@ a, p {
   line-height: 1.6;
   font-weight: 400;
   color: #f6f6f6;
+  text-decoration: none;
 }
 
 h1, h2, h3, p, a, span, i {
@@ -517,14 +526,6 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   cursor: pointer;
 }
 
-section:not(.hero-section) {
-  margin: 300px 0;
-}
-
-section:nth-of-type(2) {
-  margin-top: 0;
-}
-
 .main {
   position: relative;
   top: 3%;
@@ -674,6 +675,13 @@ section:nth-of-type(2) {
       flex-wrap: wrap;
 }
 
+.projects .skill {
+  height: 30px;
+  margin-right: 1rem;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 .projects__card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -693,8 +701,8 @@ section:nth-of-type(2) {
 }
 
 .projects .card__icon {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
 .projects .card__icon i {
@@ -712,6 +720,12 @@ section:nth-of-type(2) {
 
 .projects .card__title {
   margin: 0;
+}
+
+.projects .card__languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tools {
@@ -774,8 +788,8 @@ section:nth-of-type(2) {
   height: 5px;
   width: 8px;
   background: #333333;
-  -webkit-transition: all 0.8s ease-in;
-  transition: all 0.8s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .contact form > div:focus-within::before {
@@ -865,6 +879,8 @@ section:nth-of-type(2) {
   width: 100%;
   border: 1px solid #333333;
   padding-top: 4px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .contact button::before {
@@ -878,8 +894,8 @@ section:nth-of-type(2) {
   height: 3px;
   width: 8px;
   background: #333333;
-  -webkit-transition: all 0.8s ease-in;
-  transition: all 0.8s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .contact button:hover, .contact button:focus {

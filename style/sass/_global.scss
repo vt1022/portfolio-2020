@@ -21,6 +21,14 @@ button {
   background: none;
 }
 
+section:not(.hero-section) {
+  margin: 300px 0;
+}
+
+section:nth-of-type(2) {
+  margin-top: 0;
+}
+
 .ascii {
   @include fontBody(16);
   font-family: 'Courier New', Courier, monospace;
@@ -30,6 +38,7 @@ button {
 
 a, p {
   @include fontBody(19);
+  text-decoration: none;
 }
 
 h1, h2, h3, p, a, span, i {
