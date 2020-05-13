@@ -58,7 +58,6 @@
           <div class="about__photo-container">
             <img class="about__photo" src="./assets/portrait-photo.jpg" alt="">
             <div class="about__body">
-              <h2 class="about__body-title">designer turned dev</h2>
               <p class="about__body-text">
                 Hey! I'm Vincci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, obcaecati aut earum tenetur animi quas consequatur excepturi ipsam necessitatibus. Non harum maxime placeat voluptates, porro aut sed voluptas explicabo corporis nihil repellendus ipsum libero quidem beatae impedit recusandae dolores ad ratione. Voluptates recusandae mollitia tempora assumenda optio quas inventore nostrum?
               </p>
@@ -71,9 +70,61 @@
         <h2>projects<span class="ascii">(ﾉ◕ヮ◕)ﾉ</span></h2>
         <div class="projects">
           <div class="projects__card">
-            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
+            <div class="card__img-container container">
+              <a href="https://vt1022.github.io/delicious/">
+                <img class="card__img" src="./assets/delicious-mockup.png" alt="">
+              </a>
+            </div>
 
-            <div class="card__overlay">
+            <div class="card__info-container container">
+              <h3 class="card__title">Delicious</h3>
+              <p class="card__description">
+                A website for a restaurant. Fully responsive multi-page PSD conversion
+              </p>
+              <ul class="card__languages">
+    
+              </ul>
+              <a class="card__icon" href="https://github.com/vt1022/delicious"><i class="fab fa-github" aria-label="to github repo"></i></a>
+            </div>
+          </div> <!-- .projects__card-->
+          <div class="projects__card">
+            <div class="card__info-container container">
+              <h3 class="card__title">PokeMatch</h3>
+              <p class="card__description">
+    
+              </p>
+              <ul class="card__languages">
+    
+              </ul>
+              <a class="card__icon" href="https://github.com/vt1022/pokematch"><i class="fab fa-github" aria-label="to github repo"></i></a>
+            </div>
+
+            <div class="card__img-container container">
+              <a href="https://vt1022.github.io/pokematch">
+                <img class="card__img" src="./assets/pokematch-mockup.png" alt="">
+              </a>
+            </div>
+          </div> <!-- .projects__card-->
+          <div class="projects__card">
+            <div class="card__img-container container">
+              <a href="https://vt1022.github.io/divcraft">
+                <img class="card__img" src="./assets/divcraft-mockup.png" alt="">
+              </a>
+            </div>
+
+            <div class="card__info-container container">
+              <h3 class="card__title">DivCraft</h3>
+              <p class="card__description">
+    
+              </p>
+              <ul class="card__languages">
+    
+              </ul>
+              <a class="card__icon" href="https://github.com/vt1022/divcraft"><i class="fab fa-github" aria-label="to github repo"></i></a>
+            </div>
+          </div> <!-- .projects__card-->
+          <div class="projects__card">
+            <div class="card__info-container container">
               <h3 class="card__title">Title</h3>
               <p class="card__description">
     
@@ -82,44 +133,11 @@
     
               </ul>
             </div>
-          </div> <!-- .projects__card-->
-          <div class="projects__card">
-            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
 
-            <div class="card__overlay">
-              <h3 class="card__title">Title</h3>
-              <p class="card__description">
-    
-              </p>
-              <ul class="card__languages">
-    
-              </ul>
-            </div>
-          </div> <!-- .projects__card-->
-          <div class="projects__card">
-            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
-
-            <div class="card__overlay">
-              <h3 class="card__title">Title</h3>
-              <p class="card__description">
-    
-              </p>
-              <ul class="card__languages">
-    
-              </ul>
-            </div>
-          </div> <!-- .projects__card-->
-          <div class="projects__card">
-            <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
-
-            <div class="card__overlay">
-              <h3 class="card__title">Title</h3>
-              <p class="card__description">
-    
-              </p>
-              <ul class="card__languages">
-    
-              </ul>
+            <div class="card__img-container container">
+              <a href="###">
+                <img class="card__img" src="https://via.placeholder.com/468x289" alt="">
+              </a>
             </div>
           </div> <!-- .projects__card-->
         </div> <!-- .projects__container-->
@@ -179,9 +197,9 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam eum aliquid in laudantium illum ut quis aut id at officia, beatae quibusdam sunt temporibus veritatis reiciendis incidunt ea. Aliquid, rem?</p>
           </div>
           <form action="https://formspree.io/xgenvpbb" method="POST">
-            <div>
+            <div> <!-- relative -->
               <input type="text" name="name" id="name" required>
-              <label for="name">name</label>
+              <label for="name">name</label> <!-- absolute -->
             </div>
 
             <div>

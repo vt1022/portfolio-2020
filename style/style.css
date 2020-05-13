@@ -309,8 +309,8 @@ button {
 }
 
 a, p {
-  font-size: 17px;
-  font-size: 1.7rem;
+  font-size: 19px;
+  font-size: 1.9rem;
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -517,8 +517,12 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   cursor: pointer;
 }
 
-section {
-  margin: 50px 0;
+section:not(.hero-section) {
+  margin: 300px 0;
+}
+
+section:nth-of-type(2) {
+  margin-top: 0;
 }
 
 .main {
@@ -581,7 +585,6 @@ section {
       -ms-flex-align: center;
           align-items: center;
   height: 95vh;
-  margin: 0;
 }
 
 .hero {
@@ -672,40 +675,39 @@ section {
 }
 
 .projects__card {
-  position: relative;
-  width: calc( 50% - 1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   margin-bottom: 2rem;
 }
 
-.projects__card:hover .card__overlay {
-  position: absolute;
-  display: block;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 1;
+.projects__card .container {
+  width: calc( 50% - 1rem);
+  min-width: 400px;
+}
+
+.projects .card__icon {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+.projects .card__icon i {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.projects .card__icon:hover i {
+  color: #644FBD;
 }
 
 .projects .card__img {
   width: 100%;
-}
-
-.projects .card__overlay {
-  position: absolute;
-  display: block;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .projects .card__title {
@@ -769,11 +771,11 @@ section {
   width: 100%;
   top: initial;
   bottom: 0;
-  height: 3px;
+  height: 5px;
   width: 8px;
   background: #333333;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
 }
 
 .contact form > div:focus-within::before {
@@ -791,6 +793,8 @@ section {
 
 .contact input,
 .contact textarea {
+  display: block;
+  position: relative;
   font-size: 16px;
   font-size: 1.6rem;
   font-family: 'Khula', sans-serif;
@@ -874,8 +878,8 @@ section {
   height: 3px;
   width: 8px;
   background: #333333;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
 }
 
 .contact button:hover, .contact button:focus {

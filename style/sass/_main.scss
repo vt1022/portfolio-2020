@@ -1,6 +1,9 @@
+section:not(.hero-section) {
+  margin: 300px 0;
+}
 
-section {
-  margin: 50px 0;
+section:nth-of-type(2) {
+  margin-top: 0;
 }
 
 .main {
@@ -47,7 +50,6 @@ section {
   // position: relative;
   // right: 10%;
   height: 95vh;
-  margin: 0;
   // background: $color1;
 }
 
@@ -122,26 +124,37 @@ section {
   flex-wrap: wrap;
 
   &__card {
-    position: relative;
-    width: calc( 50% - 1rem);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 2rem;
 
-    &:hover .card__overlay {
-      @include overlay;
-      opacity: 1;
+    .container {
+      // flex: 1 0 auto;
+      width: calc( 50% - 1rem);
+      min-width: 400px;
     }
   }
 
   .card {
+    
+    &__icon {
+      @include fontSize(30);
+
+      i { transition: all 0.3s ease-in; }
+
+      &:hover i {
+        color: $color1;
+      }
+    }
+
     &__img {
       width: 100%;
     }
 
-    &__overlay {
-      @include overlay;
-      padding: 1rem;
-      opacity: 0;
-      transition: all 0.3s ease;
+    &__info-container {
+      // padding: 0 1rem;
     }
 
     &__title {
@@ -203,10 +216,10 @@ section {
         top: initial;
         bottom: 0;
         // z-index: 1000;
-        height: 3px;
+        height: 5px;
         width: 8px;
         background: $grey;
-        transition: all 0.3s ease-in;
+        transition: all 0.8s ease-in;
       }
 
       &:focus-within::before {
@@ -225,6 +238,8 @@ section {
 
   input, 
   textarea {
+    display: block;
+    position: relative;
     @include fontBody(16);
     width: 100%;
     padding: 0;
@@ -233,7 +248,7 @@ section {
     border: 1px solid transparent;
     border-bottom: 1px solid $grey;
     transition: all 0.3s ease-in;
-    
+
     &:required {
       box-shadow:none;
     }
@@ -283,7 +298,7 @@ section {
       height: 3px;
       width: 8px;
       background: $grey;
-      transition: all 0.3s ease-in;
+      transition: all 0.8s ease-in;
     }
 
     &:hover, &:focus {
