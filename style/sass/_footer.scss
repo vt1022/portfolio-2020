@@ -1,3 +1,17 @@
 footer {
-  
+  position: fixed;
+  background: $black;
+  left: 50%;
+  bottom: 0;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  transform: translateX(-50%);
+
+  .copyright,
+  .copyright a {
+    @include fontBody(11);
+    text-align: right;
+    margin: 2px 0;
+  }
 }

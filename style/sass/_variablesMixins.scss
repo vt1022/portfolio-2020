@@ -75,3 +75,11 @@ $color1: #644FBD;
   right: 0;
   background: rgba($color, $alpha);
 }
+
+@mixin pseudo() {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+}
