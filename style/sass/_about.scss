@@ -13,9 +13,9 @@
   } 
 
   &__body {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-self: center;
     height: 100%;
     width: 100% - 50% / $phi;
     padding: (1px * $phi) (10px * $phi);

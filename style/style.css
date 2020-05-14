@@ -396,7 +396,7 @@ h2::before {
   width: 100%;
   top: 90%;
   z-index: -1;
-  height: 1px;
+  height: 2px;
   background: #8574cb;
 }
 
@@ -638,15 +638,6 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 }
 
 .about__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
   height: 100%;
   width: 69.0983%;
   padding: 1.61803px 16.18034px;
@@ -699,19 +690,62 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   margin-bottom: 2rem;
 }
 
-.projects__card .container {
-  width: calc( 50% - 1rem);
-  min-width: 400px;
+.projects .card__info-container {
+  position: relative;
+  width: 38.1966%;
+  min-width: 300px;
+}
+
+.projects .card__info-container:nth-of-type(even) {
+  padding-left: 1rem;
+}
+
+.projects .card__info-container::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 3rem;
+  left: initial;
+  right: 0;
+  height: 5px;
+  width: 8px;
+  background: #333333;
+}
+
+.projects .card__info-container::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 3rem;
+  border-bottom: 1px solid #333333;
+}
+
+.projects .card__title {
+  margin: 0;
+  color: #8574cb;
+}
+
+.projects .card__languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
 }
 
 .projects .card__repo {
   font-size: 20px;
   font-size: 2rem;
+  position: relative;
+  left: 50%;
   display: block;
   width: 61.8034%;
   text-align: center;
-  -webkit-transform: translateX(61.8034%);
-          transform: translateX(61.8034%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .projects .card__repo i {
@@ -725,6 +759,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 
 .projects .card__img-container {
   position: relative;
+  width: 61.8034%;
   border: 1px solid #333333;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -754,17 +789,6 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 
 .projects .card__img {
   width: 100%;
-}
-
-.projects .card__title {
-  margin: 0;
-}
-
-.projects .card__languages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 15px;
 }
 
 .tools {

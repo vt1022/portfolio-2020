@@ -16,24 +16,62 @@
     width: 100%;
     margin-bottom: 2rem;
 
-    .container {
-      width: calc( 50% - 1rem);
-      min-width: 400px;
+    .container { // for 50% width image - description
+      // width: calc( 50% - 1rem);
     }
   }
   .card {
     
 
     &__info-container {
-    
+      position: relative;
+      width: (100% - 100% / $phi);
+      min-width: 300px;
+
+      &:nth-of-type(even) {
+        padding-left: 1rem;
+      }
+
+      &::before {
+        @include pseudo;
+        top: 3rem;
+        left: initial;
+        right: 0;
+        height: 5px;
+        width: 8px;
+        background: $grey;
+      }
+
+      &::after {
+        @include pseudo;
+        top: 3rem;
+        border-bottom: 1px solid $grey;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      color: $color1;
+    }
+  
+    &__description {
+  
+    }
+  
+    &__languages {
+      display: flex;
+      margin-top: 15px;
     }
 
     &__repo {
       @include fontSize(20);
+      position: relative;
+      left: 50%;
       display: block;
       width: 100% / $phi;
+      
       text-align: center;
-      transform: translateX(100% / $phi);
+      transform: translateX(-50%);
 
       i {transition: all 0.3s ease-in;}
       &:hover i {color: $color1;}
@@ -41,6 +79,7 @@
 
     &__img-container {
       position: relative;
+      width: (100% / $phi);
       border: 1px solid $grey;
       transition: all 0.3s ease-in;
     
@@ -64,19 +103,6 @@
 
     &__img {
       width: 100%;
-    }
-
-    &__title {
-      margin: 0;
-    }
-  
-    &__description {
-  
-    }
-  
-    &__languages {
-      display: flex;
-      margin-top: 15px;
     }
   } //card
 }
