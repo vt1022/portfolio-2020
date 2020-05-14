@@ -8,6 +8,35 @@ header {
   background: $black;
   // border-bottom: 1px solid $white;
 
+// updown button code:
+  // $nav-btn-size: 40px;
+  // &__nav {
+  //   @include flexCenter;
+  //   flex-direction: column;
+  //   justify-content: space-evenly;
+    
+  //   position: absolute;
+  //   bottom: -1px;
+  //   left: 100%;
+  //   background: $black;
+    
+  //   height: ($nav-btn-size * 2 + $nav-btn-size);
+  //   width: ($nav-btn-size + $nav-btn-size / 3);
+  //   border: 1px solid $white;
+  //   border-left: none;
+  
+  //   .button {
+  //     @include fontSize(11);
+  //     align-self: flex-start;
+  //     display: block;
+  //     height: $nav-btn-size;
+  //     width: $nav-btn-size;
+  //     border: 2px solid $white;
+  //     border-radius: 50%;
+  //   }
+  // }
+// ////////////////////////////////
+
   .logo {
     @include fontLogo(32);
     width: 80%;

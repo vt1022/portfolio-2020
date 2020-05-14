@@ -21,8 +21,12 @@
     padding: (1px * $phi) (10px * $phi);
     padding-right: 0;
   
-    &-text {
+    &__text {
       margin-top: 0;
+
+      .flair {
+        color: $color1;
+      }
     }
 
     &-title {

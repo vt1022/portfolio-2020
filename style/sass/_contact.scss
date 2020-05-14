@@ -1,10 +1,17 @@
 .contact {
   display: flex;
 
+  h2 {margin-top: 0;}
+
   &__thanks {
     width: 50%;
   }
 
+  &__text {
+    margin-top: 0;
+  }
+
+  // form stuff ///////////////////////
   form {
     width: 50%;
     font-size: 0;
@@ -17,7 +24,6 @@
         @include pseudo;
         top: initial;
         bottom: 0;
-        // z-index: 1000;
         height: 5px;
         width: 8px;
         background: $grey;
@@ -26,7 +32,7 @@
 
       &:focus-within::before {
         left: calc(100% - 8px);
-        background: $white;
+        background: $color1;
       }
     }
   }
@@ -58,7 +64,7 @@
     &:focus {
       outline: none;
       border: 1px solid transparent;
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid $color1;
     }
 
     &:valid + label {
@@ -85,31 +91,6 @@
     resize: none;
   }
 
-  button {
-    @include fontBody(16);
-    position: relative;
-    width: 100%;
-    border: 1px solid $grey;
-    padding-top: 4px;
-    transition: all 0.3s ease-in;
-
-    &::before {
-      @include pseudo;
-      top: initial;
-      bottom: 0;
-      height: 3px;
-      width: 8px;
-      background: $grey;
-      transition: all 0.5s ease-in;
-    }
-
-    &:hover, &:focus {
-      border: 1px solid $white;
-
-      &::before {
-        left: calc(100% - 8px);
-        background: $white;
-      }
-    }
-  }
+  button {width: 100%;}
+  // form stuff ///////////////////////////////
 }

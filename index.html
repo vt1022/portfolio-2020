@@ -30,20 +30,20 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <div class="wrapper">
-    <main class="main">
+    
       <!-- nav up down arrows -->
-      <nav class="main__nav">
+      <!-- <aside class="aside">
         <button class="about__up button">
           <i class="fas fa-chevron-up"></i>
         </button>
         <button class="about__down button">
           <i class="fas fa-chevron-down"></i>
         </button>
-      </nav>
+      </aside> -->
+  </header>
 
+  <div class="wrapper">
+    <main class="main">
       <section class="hero-section">
         <div class="hero">
           <p class="hero__greeting">hey, i'm</p>
@@ -58,8 +58,11 @@
           <div class="about__photo-container">
             <img class="about__photo" src="./assets/portrait-photo.jpg" alt="">
             <div class="about__body">
-              <p class="about__body-text">
-                Hey! I'm Vincci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, obcaecati aut earum tenetur animi quas consequatur excepturi ipsam necessitatibus. Non harum maxime placeat voluptates, porro aut sed voluptas explicabo corporis nihil repellendus ipsum libero quidem beatae impedit recusandae dolores ad ratione. Voluptates recusandae mollitia tempora assumenda optio quas inventore nostrum?
+              <p class="about__body__text">
+                Hi! I'm Vincci, a front-end developer. With the help of Juno College (formerly HackerYou), I changed paths from a designer to a developer. I understand the importance of <span class="flair">reusability, user experience and accessibility</span> from both worlds. Since my transition, I came to love <span class="flair geek-talk">! + tab, doc ready, and npm create-react-app</span> because I enjoy creating something from a blank page.
+              </p>
+              <p class="about__body__text">
+                When I'm not coding, I enjoy drawing, snowboarding, and hiking with my dogs. Currently in quarantine, I'm also stuck to Valorant.
               </p>
             </div>
           </div>
@@ -67,50 +70,8 @@
       </section> <!-- .about-section -->
       
       <section class="projects-section">
-        <h2>projects<span class="ascii">(ﾉ◕ヮ◕)ﾉ</span></h2>
+        <h2>projects<span class="ascii">ψ(._. )></span></h2>
         <div class="projects">
-          <div class="projects__card">
-            <div class="card__img-container container">
-              <a href="https://vt1022.github.io/delicious/">
-                <img class="card__img" src="./assets/delicious-mockup.png" alt="">
-              </a>
-            </div>
-            <div class="card__info-container container">
-              <h3 class="card__title">Delicious</h3>
-              <ul class="card__languages">
-                <li><img class="skill" src="./assets/html-5.svg" alt="html 5 logo"></li>
-                <li><img class="skill" src="./assets/css-3.svg" alt="css 3 logo"></li>
-                <li><img class="skill" src="./assets/sass.svg" alt="sass logo"></li>
-              </ul>
-              <p class="card__description">
-                Website for a food brand. Fully responsive multi-page PSD conversion.
-              </p>
-              <a class="card__icon" href="https://github.com/vt1022/delicious"><i class="fab fa-github" aria-label="to github repo"></i> repo</a>
-            </div>
-          </div> <!-- .projects__card-->
-
-          <div class="projects__card">
-            <div class="card__info-container container">
-              <h3 class="card__title">PokéMatch</h3>
-              <ul class="card__languages">
-                <li><img class="skill" src="./assets/html-5.svg" alt="html 5 logo"></li>
-                <li><img class="skill" src="./assets/css-3.svg" alt="css 3 logo"></li>
-                <li><img class="skill" src="./assets/sass.svg" alt="sass logo"></li>
-                <li><img class="skill" src="./assets/javascript.svg" alt="JavaScript logo"></li>
-                <li><img class="skill" src="./assets/jquery.svg" alt="jQuery logo"></li>
-              </ul>
-              <p class="card__description">
-                Memory game to match pairs of Pokémon. Interactive game made with JavaScript and jQuery.
-              </p>
-              <a class="card__icon" href="https://github.com/vt1022/pokematch"><i class="fab fa-github" aria-label="to github repo"></i> repo</a>
-            </div>
-            <div class="card__img-container container">
-              <a href="https://vt1022.github.io/pokematch">
-                <img class="card__img" src="./assets/pokematch-mockup.png" alt="">
-              </a>
-            </div>
-          </div> <!-- .projects__card-->
-
           <div class="projects__card">
             <div class="card__img-container container">
               <a href="https://vt1022.github.io/divcraft">
@@ -120,17 +81,83 @@
             <div class="card__info-container container">
               <h3 class="card__title">DivCraft</h3>
               <ul class="card__languages">
-                <li><img class="skill" src="./assets/html-5.svg" alt="html 5 logo"></li>
-                <li><img class="skill" src="./assets/css-3.svg" alt="css 3 logo"></li>
-                <li><img class="skill" src="./assets/sass.svg" alt="sass logo"></li>
-                <li><img class="skill" src="./assets/react.svg" alt="react logo"></li>
+                <li><img class="skill" src="./assets/html-5.svg" alt="html 5"></li>
+                <li><img class="skill" src="./assets/css-3.svg" alt="css 3"></li>
+                <li><img class="skill" src="./assets/sass.svg" alt="sass"></li>
+                <li><img class="skill" src="./assets/react.svg" alt="react"></li>
+                <li><img class="skill" src="./assets/firebase.svg" alt="firebase"></li>
               </ul>
               <p class="card__description">
-                Character creation screen of a game. Fully responsive
+                Character creation screen of a game. Made with react and firebase.
               </p>
-              <a class="card__icon" href="https://github.com/vt1022/divcraft"><i class="fab fa-github" aria-label="to github repo"></i> repo</a>
+              <a class="card__repo button" href="https://github.com/vt1022/divcraft">GitHub repo</a>
             </div>
           </div> <!-- .projects__card -->
+
+          <div class="projects__card">
+            <div class="card__info-container container">
+              <h3 class="card__title">Fridge Verses</h3>
+              <ul class="card__languages">
+                <li><img class="skill" src="./assets/html-5.svg" alt="html 5"></li>
+                <li><img class="skill" src="./assets/css-3.svg" alt="css 3"></li>
+                <li><img class="skill" src="./assets/sass.svg" alt="sass"></li>
+                <li><img class="skill" src="./assets/javascript.svg" alt="JavaScript"></li>
+                <li><img class="skill" src="./assets/jquery.svg" alt="jQuery"></li>
+              </ul>
+              <p class="card__description">
+                Memory game to match pairs of Pokémon. Interactive game made with JavaScript and jQuery.
+              </p>
+              <a class="card__repo button" href="https://github.com/vt1022/fridge-verses">GitHub repo</a>
+            </div>
+            <div class="card__img-container container">
+              <a href="https://vt1022.github.io/fridge-verses">
+                <img class="card__img" src="./assets/fridge-verses-mockup.png" alt="">
+              </a>
+            </div>
+          </div> <!-- .projects__card-->
+
+          <div class="projects__card">
+            <div class="card__img-container container">
+              <a href="https://vt1022.github.io/delicious/">
+                <img class="card__img" src="./assets/delicious-mockup.png" alt="">
+              </a>
+            </div>
+            <div class="card__info-container container">
+              <h3 class="card__title">Delicious</h3>
+              <ul class="card__languages">
+                <li><img class="skill" src="./assets/html-5.svg" alt="html 5"></li>
+                <li><img class="skill" src="./assets/css-3.svg" alt="css 3"></li>
+                <li><img class="skill" src="./assets/sass.svg" alt="sass"></li>
+              </ul>
+              <p class="card__description">
+                Website for a food brand. Fully responsive multi-page PSD conversion.
+              </p>
+              <a class="card__repo button" href="https://github.com/vt1022/delicious">GitHub repo</a>
+            </div>
+          </div> <!-- .projects__card-->
+
+          <div class="projects__card">
+            <div class="card__info-container container">
+              <h3 class="card__title">PokéMatch</h3>
+              <ul class="card__languages">
+                <li><img class="skill" src="./assets/html-5.svg" alt="html 5"></li>
+                <li><img class="skill" src="./assets/css-3.svg" alt="css 3"></li>
+                <li><img class="skill" src="./assets/sass.svg" alt="sass"></li>
+                <li><img class="skill" src="./assets/javascript.svg" alt="JavaScript"></li>
+                <li><img class="skill" src="./assets/jquery.svg" alt="jQuery"></li>
+              </ul>
+              <p class="card__description">
+                Memory game to match pairs of Pokémon. Interactive game made with JavaScript and jQuery.
+              </p>
+              <a class="card__repo button" href="https://github.com/vt1022/pokematch">GitHub repo</a>
+            </div>
+            <div class="card__img-container container">
+              <a href="https://vt1022.github.io/pokematch">
+                <img class="card__img" src="./assets/pokematch-mockup.png" alt="">
+              </a>
+            </div>
+          </div> <!-- .projects__card-->
+
         </div> <!-- .projects -->
       </section> <!-- .projects-section -->
 
@@ -181,11 +208,11 @@
       </section> <!-- .tools-section -->
 
       <section class="contact-section">
-        <h2>contact </h2>
+        <h2>let's chat<span class="ascii">(っ´Ι`)っ - 2 meters pls - ԅ(¯﹃¯ԅ)</span></h2>
         <div class="contact">
           <div class="contact__thanks">
-            <h3>let's talk</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam eum aliquid in laudantium illum ut quis aut id at officia, beatae quibusdam sunt temporibus veritatis reiciendis incidunt ea. Aliquid, rem?</p>
+            <p class="contact__text">Thanks for checking out my work! If you want to talk more, feel free to connect with me.</p>
+            <p class="contact__email">tsui.vincci@gmail.com</p>
           </div>
           <form action="https://formspree.io/xgenvpbb" method="POST">
             <div> <!-- relative -->
@@ -207,11 +234,11 @@
           </form>
         </div>
       </section>
+      <footer>
+        <p class="copyright">design by <a href="https://themeforest.net/user/themewisdom">ThemeWisdom</a> code by <a href="https://twitter.com/vinccimantsui">@vinccimantsui</a> © 2020</p>
+      </footer>
     </main>
     
-    <footer>
-      <p class="copyright">design by <a href="https://themeforest.net/user/themewisdom">ThemeWisdom</a> code by <a href="https://twitter.com/vinccimantsui">@vinccimantsui</a> © 2020</p>
-    </footer>
   </div> <!-- wrapper -->
 
   <!-- scripts -->
