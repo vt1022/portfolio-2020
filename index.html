@@ -27,6 +27,8 @@
       <ul class="nav__links">  <!-- links and shit -->
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -40,6 +42,12 @@
           <i class="fas fa-chevron-down"></i>
         </button>
       </aside> -->
+    <aside class="nav-vertical" aria-hidden>
+      <button class="nav-vertical__btn">about</button>
+      <button class="nav-vertical__btn">projects</button>
+      <button class="nav-vertical__btn">skills</button>
+      <button class="nav-vertical__btn">contact</button>
+    </aside>
   </header>
 
   <div class="wrapper">
@@ -48,33 +56,35 @@
         <div class="hero">
           <p class="hero__greeting">hey, i'm</p>
           <h2 class="hero__name">vincci tsui
-            <span class="hero__title hero__ptag">dev</span></h2>
+            <span class="hero__title txt-rotate" data-period="2000"
+            data-rotate='[ "front-end", "dev" ]'></span>
+          </h2>
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section" id="about">
         <h2>me<span class="ascii">¯\(°‿o)/¯</span></h2>
         <div class="about">
           <div class="about__photo-container">
             <img class="about__photo" src="./assets/portrait-photo.jpg" alt="">
             <div class="about__body">
               <p class="about__body__text">
-                Hi! I'm Vincci, a front-end developer. With the help of Juno College (formerly HackerYou), I changed paths from a designer to a developer. I understand the importance of <span class="flair">reusability, user experience and accessibility</span> from both worlds. Since my transition, I came to love <span class="flair geek-talk">! + tab, doc ready, and npm create-react-app</span> because I enjoy creating something from a blank page.
+                Hi! I'm Vincci, a front-end developer. With the help of Juno College (formerly HackerYou), I transitioned from being a designer into a developer. My experience has taught me the value of <span class="flair">reusability, user experience, and accessibility</span> from both a design and a development perspective. Since my front-end journey began, I've come to love <span class="flair">! + tab, doc ready, and npm create-react-app</span> because I enjoy creating something from a blank page.
               </p>
               <p class="about__body__text">
-                When I'm not coding, I enjoy drawing, snowboarding, and hiking with my dogs. Currently in quarantine, I'm also stuck to Valorant.
+                When I'm not coding, I enjoy drawing, snowboarding, and hiking with my dogs. Currently in quarantine, Valorant has caught my interest in gaming.
               </p>
             </div>
           </div>
         </div>
       </section> <!-- .about-section -->
       
-      <section class="projects-section">
-        <h2>projects<span class="ascii">ψ(._. )></span></h2>
+      <section class="projects-section" id="projects">
+        <h2>i made this<span class="ascii">ψ(._. )></span></h2>
         <div class="projects">
           <div class="projects__card">
             <div class="card__img-container container">
-              <a href="https://vt1022.github.io/divcraft">
+              <a target="_blank" href="https://vt1022.github.io/divcraft">
                 <img class="card__img" src="./assets/divcraft-mockup.png" alt="">
               </a>
             </div>
@@ -88,9 +98,9 @@
                 <li><img class="skill" src="./assets/firebase.svg" alt="firebase"></li>
               </ul>
               <p class="card__description">
-                Character creation screen of a game. Made with react and firebase.
+                Character creation screen of a game. Made with React and Firebase.
               </p>
-              <a class="card__repo button" href="https://github.com/vt1022/divcraft">GitHub repo</a>
+              <a class="card__repo button" target="_blank" href="https://github.com/vt1022/divcraft">GitHub repo</a>
             </div>
           </div> <!-- .projects__card -->
 
@@ -101,16 +111,17 @@
                 <li><img class="skill" src="./assets/html-5.svg" alt="html 5"></li>
                 <li><img class="skill" src="./assets/css-3.svg" alt="css 3"></li>
                 <li><img class="skill" src="./assets/sass.svg" alt="sass"></li>
-                <li><img class="skill" src="./assets/javascript.svg" alt="JavaScript"></li>
-                <li><img class="skill" src="./assets/jquery.svg" alt="jQuery"></li>
+                <li><img class="skill" src="./assets/react.svg" alt="react"></li>
+                <li><img class="skill" src="./assets/firebase.svg" alt="firebase"></li>
               </ul>
               <p class="card__description">
-                Memory game to match pairs of Pokémon. Interactive game made with JavaScript and jQuery.
+                Interactive game made in React using Axios and Firebase.
+                Mob programmed with <a target="_blank" href="https://twitter.com/ThisIsZarinaMia">Zarina</a>, <a target="_blank" href="https://twitter.com/EdithWerbel">Edith</a>, and <a target="_blank" href="https://twitter.com/n_s_chth_ng">George</a>
               </p>
-              <a class="card__repo button" href="https://github.com/vt1022/fridge-verses">GitHub repo</a>
+              <a class="card__repo button" target="_blank" href="https://github.com/vt1022/fridge-verses">GitHub repo</a>
             </div>
             <div class="card__img-container container">
-              <a href="https://vt1022.github.io/fridge-verses">
+              <a target="_blank" href="https://vt1022.github.io/fridge-verses">
                 <img class="card__img" src="./assets/fridge-verses-mockup.png" alt="">
               </a>
             </div>
@@ -118,7 +129,7 @@
 
           <div class="projects__card">
             <div class="card__img-container container">
-              <a href="https://vt1022.github.io/delicious/">
+              <a target="_blank" href="https://vt1022.github.io/delicious/">
                 <img class="card__img" src="./assets/delicious-mockup.png" alt="">
               </a>
             </div>
@@ -132,7 +143,7 @@
               <p class="card__description">
                 Website for a food brand. Fully responsive multi-page PSD conversion.
               </p>
-              <a class="card__repo button" href="https://github.com/vt1022/delicious">GitHub repo</a>
+              <a class="card__repo button" target="_blank" href="https://github.com/vt1022/delicious">GitHub repo</a>
             </div>
           </div> <!-- .projects__card-->
 
@@ -149,10 +160,10 @@
               <p class="card__description">
                 Memory game to match pairs of Pokémon. Interactive game made with JavaScript and jQuery.
               </p>
-              <a class="card__repo button" href="https://github.com/vt1022/pokematch">GitHub repo</a>
+              <a class="card__repo button" target="_blank" href="https://github.com/vt1022/pokematch">GitHub repo</a>
             </div>
             <div class="card__img-container container">
-              <a href="https://vt1022.github.io/pokematch">
+              <a target="_blank" href="https://vt1022.github.io/pokematch">
                 <img class="card__img" src="./assets/pokematch-mockup.png" alt="">
               </a>
             </div>
@@ -161,8 +172,8 @@
         </div> <!-- .projects -->
       </section> <!-- .projects-section -->
 
-      <section class="tools-section">
-        <h2>toolbox<span class="ascii">ᕦ(ò‿óˇ)ᕥ</span></h2>
+      <section class="tools-section" id="skills">
+        <h2>i know this<span class="ascii">ᕦ(ò‿óˇ)ᕥ</span></h2>
         <ul class="tools"> 
           <li class="tools__card">
             <img class="skill" src="./assets/html-5.svg" alt="html 5 logo">
@@ -207,8 +218,8 @@
         </ul> <!-- .tools -->
       </section> <!-- .tools-section -->
 
-      <section class="contact-section">
-        <h2>let's chat<span class="ascii">(っ´Ι`)っ - 2 meters pls - ԅ(¯﹃¯ԅ)</span></h2>
+      <section class="contact-section" id="contact">
+        <h2>let's chat<span class="ascii">(っ´Ι`)っ  ԅ(¯﹃¯ԅ)</span></h2>
         <div class="contact">
           <div class="contact__thanks">
             <p class="contact__text">Thanks for checking out my work! If you want to talk more, feel free to connect with me.</p>
@@ -235,7 +246,7 @@
         </div>
       </section>
       <footer>
-        <p class="copyright">design by <a href="https://themeforest.net/user/themewisdom">ThemeWisdom</a> code by <a href="https://twitter.com/vinccimantsui">@vinccimantsui</a> © 2020</p>
+        <p class="copyright">design by <a target="_blank" href="https://themeforest.net/user/themewisdom">ThemeWisdom</a> code by <a target="_blank" href="https://twitter.com/vinccimantsui">vinccimantsui</a> © 2020</p>
       </footer>
     </main>
     

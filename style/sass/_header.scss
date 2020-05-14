@@ -43,32 +43,17 @@ header {
     margin: 10px 0;
   }
   
-  // hamburger starts
-  
   .nav {
+    // hamburger starts
     &__toggle-label {
-      // position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
+      position: relative;
+      // top: 20px;
+      // right: 20px;
+      z-index: 12;
       transition: 0.5s;
     }
   
     &__toggle-input{ display: none; }
-
-    /* hamburger starts */
-    &__links { 
-      position: absolute;
-      left: -200%;
-      top: 0;
-      right: 0;
-      
-      flex-direction: column;
-      width: 100%;
-      overflow: hidden;
-
-      transition: all 0.5s ease-in;
-    }
 
     .hamburger {
       display: flex;
@@ -80,6 +65,19 @@ header {
       min-width: 30px;
 
       transition: 0.5s ease;
+    }
+
+    &__links { 
+      position: absolute;
+      left: -200%;
+      top: 0;
+      right: 0;
+      
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+
+      transition: all 0.5s ease-in;
     }
 
     .hamburger-lines {
@@ -97,31 +95,31 @@ header {
 
     .hamburger:active .hamburger-lines { transform: translateY(-10px); }
 
-    /* hamburger animation starts */
-    &__toggle-input:checked + label > .hamburger {
-      transform: rotate(360deg);
-    }
+    // hamburger animation starts 
+    // &__toggle-input:checked + label > .hamburger {
+    //   transform: rotate(360deg);
+    // }
 
-    &__toggle-input:checked + label > .hamburger > .line1 {
-      transform: rotate(45deg) translate(30px, 20px);
-      // border-radius: 30px;
-    }
+    // &__toggle-input:checked + label > .hamburger > .line1 {
+    //   transform: rotate(45deg) translate(30px, 20px);
+    //   // border-radius: 30px;
+    // }
 
-    &__toggle-input:checked + label > .hamburger > .line2 {
-      border: transparent;
-      transform: rotate(230deg) translate(-170px, -60px);
-      opacity: 0;
-    }
+    // &__toggle-input:checked + label > .hamburger > .line2 {
+    //   border: transparent;
+    //   transform: rotate(230deg) translate(-170px, -60px);
+    //   opacity: 0;
+    // }
 
-    &__toggle-input:checked + label > .hamburger > .line3 {
-      transform: rotate(-45deg) translate(5px, 5px);
-      // border-radius: 30px;
-    }
-    /* hamburger animation ends */
+    // &__toggle-input:checked + label > .hamburger > .line3 {
+    //   transform: rotate(-45deg) translate(5px, 5px);
+    //   // border-radius: 30px;
+    // }
+    // hamburger animation ends
 
     &__toggle-input:checked ~ ul:first-of-type {
       position: fixed;
-      z-index: 1;
+      z-index: 2;
       left: 0;
       
       width: 100%;
@@ -131,8 +129,8 @@ header {
     }
 
     .hamburger:hover, .hamburger:focus { cursor: pointer; }
-    /* hamburger ends */
-  }
-  // hamburger ends
-  
+    // hamburger ends
+
+  } // nav
+
 } // header

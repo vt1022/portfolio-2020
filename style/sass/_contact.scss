@@ -1,10 +1,11 @@
 .contact {
   display: flex;
+  justify-content: space-between;
 
   h2 {margin-top: 0;}
 
   &__thanks {
-    width: 50%;
+    width: calc( 50% - 1rem);
   }
 
   &__text {
@@ -13,7 +14,7 @@
 
   // form stuff ///////////////////////
   form {
-    width: 50%;
+    width: calc( 50% - 1rem);
     font-size: 0;
 
     > div {

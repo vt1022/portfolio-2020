@@ -18,7 +18,7 @@
   &__name {
     @include fontLogo(32);
     margin: 0;
-    &::before{ content: none; }
+    &::before, &::after { content: none; }
   }
 
   &__title {

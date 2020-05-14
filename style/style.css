@@ -295,7 +295,7 @@ button, .button {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   position: relative;
   padding: 0;
   padding-top: 4px;
@@ -349,7 +349,7 @@ section:last-of-type {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   font-family: 'Courier New', Courier, monospace;
   margin-left: 20px;
   line-height: 0;
@@ -361,12 +361,48 @@ a, p {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   text-decoration: none;
 }
 
-h1, h2, h3, p, a, span, i {
-  color: #f6f6f6;
+a {
+  position: relative;
+  color: #8574cb;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+a:hover {
+  color: #dfeef1;
+}
+
+a:hover::before {
+  width: 100%;
+  background: #8574cb;
+}
+
+a::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: initial;
+  bottom: calc(20% + 3px);
+  z-index: -1;
+  height: 1px;
+  width: 6px;
+  background: #dfeef1;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+button a::before {
+  content: none;
+}
+
+h1, h2, h3, p, span, i {
+  color: #dfeef1;
 }
 
 h1 {
@@ -374,7 +410,7 @@ h1 {
   font-size: 3.2rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   margin-top: 0;
 }
 
@@ -383,7 +419,7 @@ h2, h3 {
   font-size: 2.8rem;
   font-family: 'Limelight', cursive;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   position: relative;
   margin-top: 0;
 }
@@ -396,7 +432,19 @@ h2::before {
   width: 100%;
   top: 90%;
   z-index: -1;
-  height: 2px;
+  height: 1px;
+  background: #8574cb;
+}
+
+h2::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 3rem;
+  height: 5px;
+  width: 8px;
   background: #8574cb;
 }
 
@@ -409,11 +457,11 @@ h2::before {
   position: fixed;
   top: 57px;
   right: 0;
-  z-index: 10;
+  z-index: 1;
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
-  border-top: 1px solid #f6f6f6;
+  border-top: 1px solid #dfeef1;
 }
 
 .wrapper {
@@ -448,43 +496,20 @@ header .logo {
   font-size: 3.2rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   width: 80%;
   margin: 10px 0;
 }
 
-header .nav {
-  /* hamburger starts */
-  /* hamburger animation starts */
-  /* hamburger animation ends */
-  /* hamburger ends */
-}
-
 header .nav__toggle-label {
-  top: 20px;
-  right: 20px;
-  z-index: 3;
+  position: relative;
+  z-index: 12;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 header .nav__toggle-input {
   display: none;
-}
-
-header .nav__links {
-  position: absolute;
-  left: -200%;
-  top: 0;
-  right: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  overflow: hidden;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
 }
 
 header .nav .hamburger {
@@ -506,13 +531,28 @@ header .nav .hamburger {
   transition: 0.5s ease;
 }
 
+header .nav__links {
+  position: absolute;
+  left: -200%;
+  top: 0;
+  right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
 header .nav .hamburger-lines {
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100%;
   height: 3px;
   border-radius: 4px;
-  background: #f6f6f6;
+  background: #dfeef1;
   -webkit-transition: 0.5s ease 0.5s;
   transition: 0.5s ease 0.5s;
 }
@@ -530,31 +570,9 @@ header .nav .hamburger:active .hamburger-lines {
           transform: translateY(-10px);
 }
 
-header .nav__toggle-input:checked + label > .hamburger {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-header .nav__toggle-input:checked + label > .hamburger > .line1 {
-  -webkit-transform: rotate(45deg) translate(30px, 20px);
-          transform: rotate(45deg) translate(30px, 20px);
-}
-
-header .nav__toggle-input:checked + label > .hamburger > .line2 {
-  border: transparent;
-  -webkit-transform: rotate(230deg) translate(-170px, -60px);
-          transform: rotate(230deg) translate(-170px, -60px);
-  opacity: 0;
-}
-
-header .nav__toggle-input:checked + label > .hamburger > .line3 {
-  -webkit-transform: rotate(-45deg) translate(5px, 5px);
-          transform: rotate(-45deg) translate(5px, 5px);
-}
-
 header .nav__toggle-input:checked ~ ul:first-of-type {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   width: 100%;
   height: auto;
@@ -565,12 +583,71 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   cursor: pointer;
 }
 
+.nav-vertical {
+  position: absolute;
+  top: 45vh;
+  right: 100%;
+}
+
+.nav-vertical::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: -30.9017%;
+  height: 161.8034%;
+  border-left: 1px solid #333333;
+}
+
+.nav-vertical__btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  margin-left: 8px;
+  color: #333333;
+  text-align: left;
+}
+
+.nav-vertical__btn:hover, .nav-vertical__btn:focus {
+  border: none;
+  color: #dfeef1;
+}
+
+.nav-vertical__btn::before {
+  top: initial;
+  bottom: 1rem;
+  left: -12px;
+  z-index: -1;
+}
+
+.nav-vertical__btn::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: initial;
+  bottom: 1rem;
+  left: -8px;
+  z-index: -1;
+  width: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.nav-vertical__btn:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #8574cb;
+}
+
 .main {
   position: relative;
   top: 3%;
   padding-top: 2rem;
   padding-right: 2rem;
-  border-right: 1px solid #f6f6f6;
+  border-right: 1px solid #dfeef1;
   margin: 0 auto;
   margin-left: 10%;
 }
@@ -603,11 +680,11 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   font-size: 3.2rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   margin: 0;
 }
 
-.hero__name::before {
+.hero__name::before, .hero__name::after {
   content: none;
 }
 
@@ -616,7 +693,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   font-size: 2.5rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   display: block;
   margin: 6px 4px 0 0;
   text-align: right;
@@ -800,6 +877,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 60px;
 }
 
 .tools .skill {
@@ -824,6 +902,9 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contact h2 {
@@ -831,7 +912,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 }
 
 .contact__thanks {
-  width: 50%;
+  width: calc( 50% - 1rem);
 }
 
 .contact__text {
@@ -839,7 +920,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 }
 
 .contact form {
-  width: 50%;
+  width: calc( 50% - 1rem);
   font-size: 0;
 }
 
@@ -885,7 +966,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -923,7 +1004,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #f6f6f6;
+  color: #dfeef1;
   position: absolute;
   top: 0;
   left: 0;
@@ -943,14 +1024,31 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   width: 100%;
 }
 
-footer .copyright,
+footer .copyright {
+  font-size: 11px;
+  font-size: 1.1rem;
+  font-family: 'Khula', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #dfeef1;
+  text-align: right;
+  margin: 2px 0;
+}
+
 footer .copyright a {
   font-size: 11px;
   font-size: 1.1rem;
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #f6f6f6;
-  text-align: right;
-  margin: 2px 0;
+  color: #8574cb;
+}
+
+@media (max-width: 835px) {
+  .nav-vertical {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+  }
 }

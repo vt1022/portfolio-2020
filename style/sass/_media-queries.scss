@@ -1,5 +1,8 @@
-@media (max-width: 870px) {
-  
+@media (max-width: 835px) {
+  .nav-vertical {display: none;}
+  .main {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 695px) {

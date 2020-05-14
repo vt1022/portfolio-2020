@@ -62,7 +62,37 @@ a, p {
   text-decoration: none;
 }
 
-h1, h2, h3, p, a, span, i {
+a {
+  position: relative;
+  color: $color1;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $white;
+
+    &::before {
+      width: 100%;
+      background: $color1;
+    }
+  }
+}
+
+a::before {
+  @include pseudo;
+  top: initial;
+  bottom: calc(20% + 3px);
+  z-index: -1;
+  height: 1px;
+  width: 6px;
+  background: $white;
+  transition: all 0.3s ease-in;
+}
+
+button a::before {
+  content: none;
+}
+
+h1, h2, h3, p, span, i {
   color: $white;
 }
 
@@ -81,7 +111,15 @@ h2::before {
   @include pseudo;
   top: 90%;
   z-index: -1;
-  height: 2px;
+  height: 1px;
+  background: $color1;
+}
+
+h2::after {
+  @include pseudo;
+  top: 3rem;
+  height: 5px;
+  width: 8px;
   background: $color1;
 }
 
@@ -90,7 +128,7 @@ h2::before {
   position: fixed;
   top: 57px;
   right: 0;
-  z-index: 10;
+  z-index: 1;
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
