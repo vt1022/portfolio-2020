@@ -28,12 +28,12 @@
     padding-top: 5px;
     height: 60px;
     width: 60px;
-    border: 1px solid $grey;
+    border: 1px solid $color2;
 
     &:hover .fab, 
     &:focus .fab, 
     &:focus-within .fab {
-      color: $color1;
+      color: $color2;
     }
 
     .fab {
@@ -58,7 +58,7 @@
         bottom: 0;
         height: 5px;
         width: 8px;
-        background: $grey;
+        background: $color2;
         transition: all 0.5s ease-in;
       }
 
@@ -86,7 +86,7 @@
     margin: 0;
     background: none;
     border: 1px solid transparent;
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid $color2;
     transition: all 0.3s ease-in;
 
     &:required {box-shadow:none;}

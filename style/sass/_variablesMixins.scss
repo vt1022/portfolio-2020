@@ -5,11 +5,10 @@ $small-angle: 360 / ($phi + 1);    // 137.5
 $large-angle: 360 - $small-angle;  // 222.5
 // font colours + pseudo states
 $black: #000;
-$grey: #333333;
-$white: #dfeef1;
-$color1: #8574CB;
-$color2: #5E0;
-// $color1: rgb(120, 2, 255);
+$grey: #5f5f5f;
+$white: #dddddd;
+$color1: #55ccc0;
+$color2: #8574CB;
 
 // mixins
 

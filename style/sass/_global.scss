@@ -1,12 +1,7 @@
-::selection { color: turquoise; }
-
-:focus {@include focusState();}
+::selection { color: #cc1; }
 html {scroll-behavior: smooth;}
 img {display: block;}
-
-body {
-  background: $black;
-}
+body {background: $black;}
 
 ul, ol, li {
   padding: 0;
@@ -20,7 +15,7 @@ button, .button {
 
   padding: 0;
   padding-top: 4px;
-  border: 1px solid $grey;
+  border: 1px solid $color2;
   margin: 0;
 
   background: none;
@@ -33,13 +28,13 @@ button, .button {
     bottom: 0;
     height: 4px;
     width: 8px;
-    background: $grey;
+    background: $color2;
     transition: all 0.3s ease-in;
   }
 
   &:hover, &:focus, &:focus-within {
     border: 1px solid $color1;
-    color: $color1;
+    color: $color2;
     outline: none;
 
     &::before {
@@ -107,9 +102,10 @@ h1 {
 }
 
 h2, h3 {
-  @include fontTitle(28);
+  @include fontTitle(28, 400, $color1);
   position: relative;
   margin-top: 0;
+  text-transform: lowercase;
 }
 
 h2::before {
@@ -117,7 +113,7 @@ h2::before {
   top: 3rem;
   z-index: -1;
   height: 1px;
-  background: $color1;
+  background: $white;
 }
 
 h2::after {
@@ -125,7 +121,7 @@ h2::after {
   top: 3rem;
   height: 4px;
   width: 8px;
-  background: $color1;
+  background: $white;
 }
 
 .main::before {

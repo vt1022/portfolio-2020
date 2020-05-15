@@ -12,9 +12,9 @@ header {
   @include fontLogo(32);
   width: 80%;
   margin: 10px 0;
-  color: $color1;
+  color: $white;
 
-  &__v {color: $white;}
+  &__v {color: $color1;}
 }
 
 .nav {
@@ -38,7 +38,6 @@ header {
           width: 100%;
         }
       }
-
     }
   }
 
@@ -48,11 +47,13 @@ header {
     &::before {
       @include pseudo;
       top: -50% / $phi;
+      z-index: -4;
       height: 100% * $phi;
       border-left: 1px solid $grey;
     }
 
     &__btn {
+      @include fontSize(21);
       position: relative;
       display: block;
       border: none;
@@ -61,7 +62,7 @@ header {
 
       &:hover, &:focus {
         border: none;
-        color: $color1;
+        color: $color2;
       }
 
       &::before {
@@ -142,17 +143,6 @@ header {
     transform: translateY(-4px) rotate(-45deg);
   }
   // hamburger animation ends
-
-  &__toggle-input:checked ~ ul {
-    z-index: 2;
-    top: 0;
-    right: 0;
-    
-    width: 30%;
-    height: 100%;
-
-    background: $black;
-  }
 
   .hamburger:hover, .hamburger:focus { cursor: pointer; }
   // hamburger ends

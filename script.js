@@ -70,7 +70,11 @@ vt.textAnimation = function() {
 }
 
 vt.init = function() {
-  AOS.init(); //load aos library
+  AOS.init({ // init/load aos
+    duration: 1200, 
+  }); //load aos library
+  vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
+  vt.sideNav();
   // remove focus on mouseleave
   $('button, a, .container').on('mouseleave', function() {
     $(this).blur();
@@ -83,8 +87,6 @@ vt.init = function() {
   $('.nav__links__btn').on('click', function() {
     $("#toggle").prop("checked", false);
   })
-  vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
-  vt.sideNav();
 }
 
 $(function() { 

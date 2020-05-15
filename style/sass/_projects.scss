@@ -14,7 +14,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
   }
 
   .card {
@@ -46,7 +46,7 @@
 
     &__title {
       margin: 0;
-      color: $color1;
+      color: $color2;
     }
   
     &__languages {
@@ -56,14 +56,14 @@
 
     &__repo {
       @include fontSize(20);
-      position: relative;
-      left: 50%;
-      display: block;
-      width: 100%;
+      // position: relative;
+      // left: 50%;
+      display: inline-block;
+      width: calc(50% - 1rem);
       
       text-align: center;
-      transform: translateX(-50%);
-
+      // transform: translateX(-50%);
+      &:first-of-type {margin-right: 1rem;}
       i {transition: all 0.3s ease-in;}
       &:hover i {color: $color1;}
     }

@@ -264,11 +264,11 @@ html {
 }
 
 ::-moz-selection {
-  color: turquoise;
+  color: #cc1;
 }
 
 ::selection {
-  color: turquoise;
+  color: #cc1;
 }
 
 html {
@@ -295,11 +295,11 @@ button, .button {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   position: relative;
   padding: 0;
   padding-top: 4px;
-  border: 1px solid #333333;
+  border: 1px solid #8574CB;
   margin: 0;
   background: none;
   text-transform: lowercase;
@@ -317,13 +317,13 @@ button::before, .button::before {
   bottom: 0;
   height: 4px;
   width: 8px;
-  background: #333333;
+  background: #8574CB;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 button:hover, button:focus, button:focus-within, .button:hover, .button:focus, .button:focus-within {
-  border: 1px solid #8574CB;
+  border: 1px solid #55ccc0;
   color: #8574CB;
   outline: none;
 }
@@ -331,7 +331,7 @@ button:hover, button:focus, button:focus-within, .button:hover, .button:focus, .
 button:hover::before, button:focus::before, button:focus-within::before, .button:hover::before, .button:focus::before, .button:focus-within::before {
   width: 8px;
   left: calc(100% - 8px);
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 section:not(.hero-section) {
@@ -353,7 +353,7 @@ section:last-of-type {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   font-family: 'Courier New', Courier, monospace;
   margin-left: 20px;
   line-height: 0;
@@ -365,24 +365,24 @@ a, p {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   text-decoration: none;
 }
 
 a {
   position: relative;
-  color: #8574CB;
+  color: #55ccc0;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 a:hover, a:focus {
-  color: #dfeef1;
+  color: #dddddd;
 }
 
 a:hover::before, a:focus::before {
   width: 100%;
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 a::before {
@@ -396,7 +396,7 @@ a::before {
   z-index: -1;
   height: 1px;
   width: 6px;
-  background: #dfeef1;
+  background: #dddddd;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -407,7 +407,7 @@ div > a::before {
 }
 
 h1, h2, h3, p, span, i {
-  color: #dfeef1;
+  color: #dddddd;
 }
 
 h1 {
@@ -415,7 +415,7 @@ h1 {
   font-size: 3.2rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   margin-top: 0;
 }
 
@@ -424,9 +424,10 @@ h2, h3 {
   font-size: 2.8rem;
   font-family: 'Limelight', cursive;
   font-weight: 400;
-  color: #dfeef1;
+  color: #55ccc0;
   position: relative;
   margin-top: 0;
+  text-transform: lowercase;
 }
 
 h2::before {
@@ -438,7 +439,7 @@ h2::before {
   top: 3rem;
   z-index: -1;
   height: 1px;
-  background: #8574CB;
+  background: #dddddd;
 }
 
 h2::after {
@@ -450,7 +451,7 @@ h2::after {
   top: 3rem;
   height: 4px;
   width: 8px;
-  background: #8574CB;
+  background: #dddddd;
 }
 
 .main::before {
@@ -466,7 +467,7 @@ h2::after {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
-  border-top: 1px solid #dfeef1;
+  border-top: 1px solid #dddddd;
 }
 
 .wrapper {
@@ -501,14 +502,14 @@ header {
   font-size: 3.2rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   width: 80%;
   margin: 10px 0;
-  color: #8574CB;
+  color: #dddddd;
 }
 
 .logo__v {
-  color: #dfeef1;
+  color: #55ccc0;
 }
 
 .nav {
@@ -526,11 +527,11 @@ header {
 }
 
 .nav__toggle-label:hover .hamburger-lines {
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 .nav__toggle-label:hover .hamburger-lines.line1 {
-  background: #dfeef1;
+  background: #dddddd;
 }
 
 .nav__toggle-label:hover .hamburger-lines.line1, .nav__toggle-label:hover .hamburger-lines.line3 {
@@ -549,16 +550,19 @@ header {
   left: 0;
   width: 100%;
   top: -30.9017%;
+  z-index: -4;
   height: 161.8034%;
-  border-left: 1px solid #333333;
+  border-left: 1px solid #5f5f5f;
 }
 
 .nav__links__btn {
+  font-size: 21px;
+  font-size: 2.1rem;
   position: relative;
   display: block;
   border: none;
   margin-left: 8px;
-  color: #dfeef1;
+  color: #dddddd;
 }
 
 .nav__links__btn:hover, .nav__links__btn:focus {
@@ -590,12 +594,12 @@ header {
 
 .nav__links__btn:hover::before {
   left: calc(100% + 4px);
-  border-bottom: 1px solid #8574CB;
+  border-bottom: 1px solid #55ccc0;
 }
 
 .nav__links__btn:hover::after {
   width: calc(100% + 16px);
-  border-bottom: 1px solid #8574CB;
+  border-bottom: 1px solid #55ccc0;
 }
 
 .nav__toggle-input {
@@ -632,7 +636,7 @@ header {
       align-self: flex-end;
   width: 100%;
   height: 1px;
-  background: #dfeef1;
+  background: #dddddd;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -644,7 +648,7 @@ header {
 .nav .hamburger-lines.line1 {
   height: 3px;
   width: 61.8034%;
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 .nav__toggle-input:checked + label > .hamburger > .line1 {
@@ -663,15 +667,6 @@ header {
           transform: translateY(-4px) rotate(-45deg);
 }
 
-.nav__toggle-input:checked ~ ul {
-  z-index: 2;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 100%;
-  background: #000;
-}
-
 .nav .hamburger:hover, .nav .hamburger:focus {
   cursor: pointer;
 }
@@ -681,7 +676,7 @@ header {
   top: 3%;
   padding-top: 2rem;
   padding-right: 2rem;
-  border-right: 1px solid #dfeef1;
+  border-right: 1px solid #dddddd;
   margin: 0 auto;
   margin-left: 5%;
 }
@@ -714,7 +709,7 @@ header {
   font-size: 3.2rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   margin: 0;
 }
 
@@ -727,7 +722,7 @@ header {
   font-size: 2.5rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   display: block;
   margin: 6px 4px 0 0;
   text-align: right;
@@ -767,7 +762,7 @@ header {
   position: relative;
   width: 115%;
   right: 15%;
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 .projects {
@@ -798,7 +793,7 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 }
 
 .projects .card__info-container {
@@ -826,7 +821,7 @@ header {
   right: 0;
   height: 5px;
   width: 8px;
-  background: #333333;
+  background: #5f5f5f;
 }
 
 .projects .card__info-container::after {
@@ -836,7 +831,7 @@ header {
   left: 0;
   width: 100%;
   top: 3rem;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #5f5f5f;
 }
 
 .projects .card__title {
@@ -854,13 +849,13 @@ header {
 .projects .card__repo {
   font-size: 20px;
   font-size: 2rem;
-  position: relative;
-  left: 50%;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: calc(50% - 1rem);
   text-align: center;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+}
+
+.projects .card__repo:first-of-type {
+  margin-right: 1rem;
 }
 
 .projects .card__repo i {
@@ -869,13 +864,13 @@ header {
 }
 
 .projects .card__repo:hover i {
-  color: #8574CB;
+  color: #55ccc0;
 }
 
 .projects .card__img-container {
   position: relative;
   width: 61.8034%;
-  border: 1px solid #333333;
+  border: 1px solid #5f5f5f;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -888,18 +883,18 @@ header {
   width: 100%;
   height: 5px;
   width: 8px;
-  background: #333333;
+  background: #5f5f5f;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 .projects .card__img-container:hover, .projects .card__img-container:focus-within {
-  border: 1px solid #8574CB;
+  border: 1px solid #55ccc0;
 }
 
 .projects .card__img-container:hover::before, .projects .card__img-container:focus-within::before {
   left: calc(100% - 8px);
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 .projects .card__img {
@@ -924,7 +919,7 @@ header {
 }
 
 .tools__card {
-  width: calc(20% - 2rem);
+  width: calc(18% - 2rem);
   min-width: 120px;
   margin: 1rem;
 }
@@ -950,7 +945,7 @@ header {
 }
 
 .contact .fa-copy {
-  color: #8574CB;
+  color: #55ccc0;
   cursor: pointer;
 }
 
@@ -992,7 +987,7 @@ header {
   padding-top: 5px;
   height: 60px;
   width: 60px;
-  border: 1px solid #333333;
+  border: 1px solid #8574CB;
 }
 
 .contact__socials__item:hover .fab,
@@ -1032,14 +1027,14 @@ header {
   bottom: 0;
   height: 5px;
   width: 8px;
-  background: #333333;
+  background: #8574CB;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
 .contact form > div:focus-within::before {
   left: calc(100% - 8px);
-  background: #8574CB;
+  background: #55ccc0;
 }
 
 .contact input:focus + label,
@@ -1059,13 +1054,13 @@ header {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   width: 100%;
   padding: 0;
   margin: 0;
   background: none;
   border: 1px solid transparent;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #8574CB;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -1080,7 +1075,7 @@ header {
 .contact textarea:focus {
   outline: none;
   border: 1px solid transparent;
-  border-bottom: 1px solid #8574CB;
+  border-bottom: 1px solid #55ccc0;
 }
 
 .contact input:valid + label,
@@ -1097,7 +1092,7 @@ header {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   position: absolute;
   top: 0;
   left: 0;
@@ -1123,7 +1118,7 @@ footer .copyright {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #dfeef1;
+  color: #dddddd;
   text-align: right;
   margin: 2px 0;
 }
@@ -1134,7 +1129,11 @@ footer .copyright a {
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #8574CB;
+  color: #55ccc0;
+}
+
+footer .copyright a:hover {
+  color: #dddddd;
 }
 
 @media (max-width: 1200px) {
@@ -1153,6 +1152,14 @@ footer .copyright a {
   }
   .nav__toggle-label {
     top: 0px;
+  }
+  .nav__toggle-input:checked ~ ul {
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: #000;
   }
   .nav__links {
     position: fixed;
@@ -1180,10 +1187,10 @@ footer .copyright a {
     font-size: 3rem;
   }
   .nav__links li {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #5f5f5f;
   }
   .nav__links li:first-of-type {
-    border-top: 1px solid #333333;
+    border-top: 1px solid #5f5f5f;
   }
   .about {
     -webkit-box-orient: vertical;
@@ -1245,6 +1252,13 @@ footer .copyright a {
   }
   .contact textarea {
     height: 200px;
+  }
+  section:not(.hero-section) {
+    margin: 150px 0;
+  }
+  section:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 100px;
   }
 }
 

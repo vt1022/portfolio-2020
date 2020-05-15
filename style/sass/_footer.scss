@@ -4,8 +4,9 @@ footer {
     text-align: right;
     margin: 2px 0;
   }
-  
+
   .copyright a {
     @include fontBody(13, 400, $color1);
+    &:hover {color: $white;}
   }
 }

@@ -10,6 +10,17 @@
   .nav {
     position: initial;
     &__toggle-label {top: 0px;}
+    
+    &__toggle-input:checked ~ ul {
+      z-index: 2;
+      top: 0;
+      right: 0;
+      
+      width: 30%;
+      height: 100%;
+  
+      background: $black;
+    }
 
     &__links {
       position: fixed;
@@ -77,6 +88,9 @@
     &__thanks, form {width: 100%;}
     textarea {height: 200px;}
   }
+
+  section:not(.hero-section) {margin: 150px 0;}
+  section:last-of-type {margin-bottom: 0; padding-bottom: 100px;}
 }
 /////////////////////////////////////////
 @media (max-width: 450px) {
