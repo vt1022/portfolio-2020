@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/ffe844f662.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Limelight&family=Major+Mono+Display&family=Open+Sans:wght@300;400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./style/style.css">
   <link type="image/png" href="assets/favicon.png" rel="icon">
@@ -12,7 +13,7 @@
 
 <body>
   <header class="wrapper">
-    <h1 class="logo"><span class="logo__v">V</span>incci</h1>
+    <h1 class="logo" data-aos="fade-right"><span class="logo__v">V</span>incci</h1>
     <nav class="nav">
       <!-- skip link -->
       <a href="#main" class="skip-link visuallyHidden">skip to main content</a>
@@ -49,10 +50,10 @@
       <section class="about-section" id="about">
         <h2>me<span class="ascii" aria-label="shrug smiley face emoji" aria-hidden>¯\(°‿o)/¯</span></h2>
         <div class="about">
-          <div class="about__photo-container">
-            <img class="about__photo" src="./assets/portrait-photo.jpg" alt="">
+          <div class="about__photo-container" data-aos="fade-left">
+            <img class="about__photo" src="./assets/portrait-photo.jpg" alt="portrait of vincci">
           </div>
-          <div class="about__body">
+          <div class="about__body" data-aos="fade-right">
             <p class="about__body__text">
               Hi! I'm Vincci, a front-end developer. With the help of Juno College (formerly HackerYou), I transitioned from being a designer into a developer. My experience has taught me the value of <span class="flair">reusability, user experience, and accessibility</span> from both a design and a development perspective. Since my front-end journey began, I've come to love <span class="flair">! + tab, doc ready, and npm create-react-app</span> because I enjoy creating something from a blank page.
             </p>
@@ -66,7 +67,7 @@
       <section class="projects-section" id="projects">
         <h2>i made this<span class="ascii" aria-label="trident looking down emoji" aria-hidden>ψ(._. )></span></h2>
         <div class="projects">
-          <div class="projects__card">
+          <div class="projects__card" data-aos="fade-right">
             <div class="card__img-container container">
               <a target="_blank" href="https://vt1022.github.io/divcraft">
                 <img class="card__img" src="./assets/divcraft-mockup.png" alt="">
@@ -88,7 +89,7 @@
             </div>
           </div> <!-- .projects__card -->
 
-          <div class="projects__card">
+          <div class="projects__card" data-aos="fade-left">
             <div class="card__info-container container">
               <h3 class="card__title">Fridge Verses</h3>
               <ul class="card__languages">
@@ -111,7 +112,7 @@
             </div>
           </div> <!-- .projects__card-->
 
-          <div class="projects__card">
+          <div class="projects__card" data-aos="fade-right">
             <div class="card__img-container container">
               <a target="_blank" href="https://vt1022.github.io/delicious/">
                 <img class="card__img" src="./assets/delicious-mockup.png" alt="">
@@ -131,7 +132,7 @@
             </div>
           </div> <!-- .projects__card-->
 
-          <div class="projects__card">
+          <div class="projects__card" data-aos="fade-left">
             <div class="card__info-container container">
               <h3 class="card__title">PokéMatch</h3>
               <ul class="card__languages">
@@ -158,7 +159,7 @@
 
       <section class="tools-section" id="skills">
         <h2>i know this<span class="ascii" aria-label="flexing emoji" aria-hidden>ᕦ(ò‿óˇ)ᕥ</span></h2>
-        <ul class="tools"> 
+        <ul class="tools" data-aos="fade-right"> 
           <li class="tools__card">
             <img class="skill" src="./assets/html-5.svg" alt="html 5 logo">
             <p>html5</p>
@@ -205,7 +206,7 @@
       <section class="contact-section" id="contact">
         <h2>let's chat<span class="ascii" aria-label="2 people talking emoji" aria-hidden>(っ´Ι`)っ  ԅ(¯﹃¯ԅ)</span></h2>
         <div class="contact">
-          <div class="contact__thanks">
+          <div class="contact__thanks" data-aos="fade-left">
             <p class="contact__text">Thanks for checking out my work! If you want to talk more, feel free to connect with me.</p>
             <p class="contact__email">tsui.vincci@gmail.com <i class="far fa-copy"></i></p>
 
@@ -228,7 +229,7 @@
             </ul>
           </div>
           <!-- message form -->
-          <form action="https://formspree.io/xgenvpbb" method="POST">
+          <form action="https://formspree.io/xgenvpbb" method="POST" data-aos="fade-right">
             <div> <!-- relative -->
               <input type="text" name="name" id="name" required>
               <label for="name">name</label> <!-- absolute -->
@@ -257,6 +258,7 @@
 
   <!-- scripts -->
   <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>

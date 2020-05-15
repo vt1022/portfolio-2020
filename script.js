@@ -70,6 +70,7 @@ vt.textAnimation = function() {
 }
 
 vt.init = function() {
+  AOS.init(); //load aos library
   // remove focus on mouseleave
   $('button, a, .container').on('mouseleave', function() {
     $(this).blur();
