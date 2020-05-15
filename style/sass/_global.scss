@@ -38,8 +38,10 @@ button, .button {
 
   &:hover, &:focus {
     border: 1px solid $color1;
+    color: $color1;
 
     &::before {
+      width: 8px;
       left: calc(100% - 8px);
       background: $color1;
     }
@@ -88,7 +90,8 @@ a::before {
   transition: all 0.3s ease-in;
 }
 
-button a::before {
+button a::before,
+div > a::before {
   content: none;
 }
 

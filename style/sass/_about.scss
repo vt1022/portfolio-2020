@@ -1,21 +1,13 @@
-.about-section {
-  padding: 2rem 0;
-}
 .about {
+  display: flex;
 
   &__photo-container {
-    display: flex;
-    // background: $grey;
+    width: 50% / $phi;
   }
   
-  &__photo {
-    width: 50% / $phi;
-  } 
+  &__photo {width: 100%;} 
 
   &__body {
-    // display: flex;
-    // flex-direction: column;
-    // align-self: center;
     height: 100%;
     width: 100% - 50% / $phi;
     padding: (1px * $phi) (10px * $phi);

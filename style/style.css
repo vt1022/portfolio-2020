@@ -323,9 +323,11 @@ button::before, .button::before {
 
 button:hover, button:focus, .button:hover, .button:focus {
   border: 1px solid #8574cb;
+  color: #8574cb;
 }
 
 button:hover::before, button:focus::before, .button:hover::before, .button:focus::before {
+  width: 8px;
   left: calc(100% - 8px);
   background: #8574cb;
 }
@@ -397,7 +399,8 @@ a::before {
   transition: all 0.3s ease-in;
 }
 
-button a::before {
+button a::before,
+div > a::before {
   content: none;
 }
 
@@ -603,16 +606,14 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 .nav-vertical__btn {
   position: relative;
   display: block;
-  width: 100%;
   border: none;
   margin-left: 8px;
-  color: #333333;
-  text-align: left;
+  color: #dfeef1;
 }
 
 .nav-vertical__btn:hover, .nav-vertical__btn:focus {
   border: none;
-  color: #dfeef1;
+  color: #8574cb;
 }
 
 .nav-vertical__btn::before {
@@ -637,8 +638,13 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   transition: all 0.3s ease-in;
 }
 
+.nav-vertical__btn:hover::before {
+  left: calc(100% + 4px);
+  border-bottom: 1px solid #8574cb;
+}
+
 .nav-vertical__btn:hover::after {
-  width: 100%;
+  width: calc(100% + 16px);
   border-bottom: 1px solid #8574cb;
 }
 
@@ -649,7 +655,7 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   padding-right: 2rem;
   border-right: 1px solid #dfeef1;
   margin: 0 auto;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .hero-section {
@@ -700,18 +706,18 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
   line-height: 0;
 }
 
-.about-section {
-  padding: 2rem 0;
-}
-
-.about__photo-container {
+.about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.about__photo {
+.about__photo-container {
   width: 30.9017%;
+}
+
+.about__photo {
+  width: 100%;
 }
 
 .about__body {
@@ -770,7 +776,11 @@ header .nav .hamburger:hover, header .nav .hamburger:focus {
 .projects .card__info-container {
   position: relative;
   width: 38.1966%;
-  min-width: 300px;
+  min-width: 200px;
+}
+
+.projects .card__info-container:nth-of-type(odd) {
+  padding-right: 1rem;
 }
 
 .projects .card__info-container:nth-of-type(even) {
@@ -1044,11 +1054,69 @@ footer .copyright a {
   color: #8574cb;
 }
 
-@media (max-width: 835px) {
+@media (max-width: 1200px) {
+  .wrapper,
+  .main::before {
+    width: 85%;
+  }
+}
+
+@media (max-width: 950px) {
   .nav-vertical {
     display: none;
   }
   .main {
     margin-left: 0;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__photo-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .about__photo {
+    position: relative;
+    top: -50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about__body {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 895px) {
+  .projects__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects__card:nth-of-type(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .projects .card__info-container {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+  .projects .card__info-container:nth-of-type(odd) {
+    padding-right: 0;
+  }
+  .projects .card__info-container:nth-of-type(even) {
+    padding-left: 0;
+  }
+  .projects .card__img-container {
+    width: 100%;
   }
 }

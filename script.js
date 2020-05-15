@@ -53,9 +53,10 @@ vt.textAnimation = function() {
 }
 
 vt.sideNav = function() {
+  // scroll to section
   $('.nav-vertical__btn').on('click', function() {
     $('html, body').animate({
-      scrollTop: $(`#${$(this).text()}`).offset().top - 100,
+      scrollTop: $(`#${$(this).text()}`).offset().top - 65,
     }, 400, 'linear');
   })
 }

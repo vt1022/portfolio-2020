@@ -13,15 +13,15 @@
   &__btn {
     position: relative;
     display: block;
-    width: 100%;
+    // width: 100%;
     border: none;
     margin-left: 8px;
-    color: $grey;
-    text-align: left;
+    color: $white;
+    // text-align: left;
 
     &:hover, &:focus {
       border: none;
-      color: $white;
+      color: $color1;
     }
 
     &::before {
@@ -41,8 +41,13 @@
       transition: all 0.3s ease-in;
     }
 
+    &:hover::before {
+      left: calc(100% + 4px);
+      border-bottom: 1px solid $color1;
+    }
+
     &:hover::after {
-      width: 100%;
+      width: calc(100% + 16px);
       border-bottom: 1px solid $color1;
     }
   }
