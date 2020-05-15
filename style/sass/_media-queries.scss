@@ -58,6 +58,7 @@
       &:nth-of-type(even) {flex-direction: column-reverse;}
     }
 
+    .card__img-container {width: 100%;}
     .card__info-container {
       width: 100%;
       margin-top: 3rem;
@@ -66,8 +67,6 @@
       &:nth-of-type(odd) {padding-right: 0;}
       &:nth-of-type(even) {padding-left: 0;}
     }
-
-    .card__img-container {width: 100%;}
   }
 }
 /////////////////////////////////////////
@@ -75,11 +74,7 @@
   .nav__toggle-input:checked ~ ul {width: 50%;}
   
   .contact {
-    &__thanks, 
-    form {
-      width: 100%;
-    }
-
+    &__thanks, form {width: 100%;}
     textarea {height: 200px;}
   }
 }

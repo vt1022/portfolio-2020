@@ -1215,6 +1215,9 @@ footer .copyright a {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .projects .card__img-container {
+    width: 100%;
+  }
   .projects .card__info-container {
     width: 100%;
     margin-top: 3rem;
@@ -1226,17 +1229,13 @@ footer .copyright a {
   .projects .card__info-container:nth-of-type(even) {
     padding-left: 0;
   }
-  .projects .card__img-container {
-    width: 100%;
-  }
 }
 
 @media (max-width: 735px) {
   .nav__toggle-input:checked ~ ul {
     width: 50%;
   }
-  .contact__thanks,
-  .contact form {
+  .contact__thanks, .contact form {
     width: 100%;
   }
   .contact textarea {

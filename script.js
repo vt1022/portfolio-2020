@@ -78,6 +78,7 @@ vt.init = function() {
   $('.fa-copy, .contact__email').on('click', function() {
     vt.copyToClipboard('.contact__email');
   })
+  // close hamburger on link click
   $('.nav__links__btn').on('click', function() {
     $("#toggle").prop("checked", false);
   })
