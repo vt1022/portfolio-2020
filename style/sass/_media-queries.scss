@@ -3,12 +3,34 @@
   .main::before {
     width: 85%;
   }
-
 }
-
+/////////////////////////////////////////
 @media (max-width: 950px) {
-  .nav-vertical {display: none;}
   .main {margin-left: 0;}
+  .nav {
+    position: initial;
+    &__toggle-label {top: 0px;}
+
+    &__links {
+      position: fixed;
+      top: 0;
+      right: -200%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+  
+      &__btn::before {
+        height: 6px;
+        width: 12px;
+      }
+      
+      &__btn {@include fontSize(30);}
+      li {border-bottom: 1px solid $grey;}
+      li:first-of-type {border-top: 1px solid $grey;}
+    }
+  }
 
   .about {
     flex-direction: column;
@@ -20,9 +42,7 @@
       overflow: hidden;
     }
 
-    &__photo {
-      object-fit: cover;
-    }
+    &__photo {object-fit: cover;}
 
     &__body {
       width: 100%;
@@ -30,12 +50,11 @@
     }
   }
 }
-
+/////////////////////////////////////////
 @media (max-width: 895px) {
   .projects {
     &__card {
       flex-direction: column;
-
       &:nth-of-type(even) {flex-direction: column-reverse;}
     }
 
@@ -48,30 +67,27 @@
       &:nth-of-type(even) {padding-left: 0;}
     }
 
-    .card__img-container {
-      width: 100%;
-    }
+    .card__img-container {width: 100%;}
   }
 }
-
+/////////////////////////////////////////
 @media (max-width: 735px) {
+  .nav__toggle-input:checked ~ ul {width: 50%;}
+  
   .contact {
-    &__thanks {
-      width: 100%;
-    }
-
+    &__thanks, 
     form {
       width: 100%;
     }
 
-    textarea {
-      height: 200px;
-    }
+    textarea {height: 200px;}
   }
 }
-
+/////////////////////////////////////////
+@media (max-width: 450px) {
+  .nav__toggle-input:checked ~ ul {width: 75%;}
+}
+/////////////////////////////////////////
 @media (max-width: 380px) {
-  .about__photo-container {
-    height: auto;
-  }
+  .about__photo-container {height: auto;}
 }

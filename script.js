@@ -2,7 +2,7 @@ const vt = {};
 
 vt.sideNav = function() {
   // scroll to section
-  $('.nav-vertical__btn').on('click', function() {
+  $('.nav__links__btn').on('click', function() {
     $('html, body').animate({
       scrollTop: $(`#${$(this).text()}`).offset().top - 65,
     }, 400, 'linear');
@@ -77,6 +77,9 @@ vt.init = function() {
   // copy email to clipboard on click
   $('.fa-copy, .contact__email').on('click', function() {
     vt.copyToClipboard('.contact__email');
+  })
+  $('.nav__links__btn').on('click', function() {
+    $("#toggle").prop("checked", false);
   })
   vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
   vt.sideNav();
