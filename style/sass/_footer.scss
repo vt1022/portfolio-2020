@@ -1,10 +1,11 @@
 footer {
   .copyright {
-    @include fontBody(11);
+    @include fontBody(13);
     text-align: right;
     margin: 2px 0;
   }
+  
   .copyright a {
-    @include fontBody(11, 400, $color1);
+    @include fontBody(13, 400, $color1);
   }
 }

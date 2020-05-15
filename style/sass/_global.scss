@@ -31,7 +31,7 @@ button, .button {
     @include pseudo;
     top: initial;
     bottom: 0;
-    height: 3px;
+    height: 4px;
     width: 8px;
     background: $grey;
     transition: all 0.3s ease-in;

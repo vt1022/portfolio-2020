@@ -315,7 +315,7 @@ button::before, .button::before {
   width: 100%;
   top: initial;
   bottom: 0;
-  height: 3px;
+  height: 4px;
   width: 8px;
   background: #333333;
   -webkit-transition: all 0.3s ease-in;
@@ -323,15 +323,15 @@ button::before, .button::before {
 }
 
 button:hover, button:focus, button:focus-within, .button:hover, .button:focus, .button:focus-within {
-  border: 1px solid #8574cb;
-  color: #8574cb;
+  border: 1px solid #8574CB;
+  color: #8574CB;
   outline: none;
 }
 
 button:hover::before, button:focus::before, button:focus-within::before, .button:hover::before, .button:focus::before, .button:focus-within::before {
   width: 8px;
   left: calc(100% - 8px);
-  background: #8574cb;
+  background: #8574CB;
 }
 
 section:not(.hero-section) {
@@ -371,7 +371,7 @@ a, p {
 
 a {
   position: relative;
-  color: #8574cb;
+  color: #8574CB;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -382,7 +382,7 @@ a:hover, a:focus {
 
 a:hover::before, a:focus::before {
   width: 100%;
-  background: #8574cb;
+  background: #8574CB;
 }
 
 a::before {
@@ -438,7 +438,7 @@ h2::before {
   top: 3rem;
   z-index: -1;
   height: 1px;
-  background: #8574cb;
+  background: #8574CB;
 }
 
 h2::after {
@@ -450,7 +450,7 @@ h2::after {
   top: 3rem;
   height: 4px;
   width: 8px;
-  background: #8574cb;
+  background: #8574CB;
 }
 
 .main::before {
@@ -504,6 +504,11 @@ header {
   color: #dfeef1;
   width: 80%;
   margin: 10px 0;
+  color: #8574CB;
+}
+
+.logo__v {
+  color: #dfeef1;
 }
 
 .nav {
@@ -521,7 +526,7 @@ header {
 }
 
 .nav__toggle-label:hover .hamburger-lines {
-  background: #8574cb;
+  background: #8574CB;
 }
 
 .nav__toggle-label:hover .hamburger-lines.line1 {
@@ -558,7 +563,7 @@ header {
 
 .nav__links__btn:hover, .nav__links__btn:focus {
   border: none;
-  color: #8574cb;
+  color: #8574CB;
 }
 
 .nav__links__btn::before {
@@ -585,12 +590,12 @@ header {
 
 .nav__links__btn:hover::before {
   left: calc(100% + 4px);
-  border-bottom: 1px solid #8574cb;
+  border-bottom: 1px solid #8574CB;
 }
 
 .nav__links__btn:hover::after {
   width: calc(100% + 16px);
-  border-bottom: 1px solid #8574cb;
+  border-bottom: 1px solid #8574CB;
 }
 
 .nav__toggle-input {
@@ -639,7 +644,7 @@ header {
 .nav .hamburger-lines.line1 {
   height: 3px;
   width: 61.8034%;
-  background: #8574cb;
+  background: #8574CB;
 }
 
 .nav__toggle-input:checked + label > .hamburger > .line1 {
@@ -755,14 +760,14 @@ header {
 }
 
 .about__body__text .flair {
-  color: #8574cb;
+  color: #8574CB;
 }
 
 .about__body-title {
   position: relative;
   width: 115%;
   right: 15%;
-  background: #8574cb;
+  background: #8574CB;
 }
 
 .projects {
@@ -836,7 +841,7 @@ header {
 
 .projects .card__title {
   margin: 0;
-  color: #8574cb;
+  color: #8574CB;
 }
 
 .projects .card__languages {
@@ -864,7 +869,7 @@ header {
 }
 
 .projects .card__repo:hover i {
-  color: #8574cb;
+  color: #8574CB;
 }
 
 .projects .card__img-container {
@@ -889,12 +894,12 @@ header {
 }
 
 .projects .card__img-container:hover, .projects .card__img-container:focus-within {
-  border: 1px solid #8574cb;
+  border: 1px solid #8574CB;
 }
 
 .projects .card__img-container:hover::before, .projects .card__img-container:focus-within::before {
   left: calc(100% - 8px);
-  background: #8574cb;
+  background: #8574CB;
 }
 
 .projects .card__img {
@@ -945,7 +950,7 @@ header {
 }
 
 .contact .fa-copy {
-  color: #8574cb;
+  color: #8574CB;
   cursor: pointer;
 }
 
@@ -993,7 +998,7 @@ header {
 .contact__socials__item:hover .fab,
 .contact__socials__item:focus .fab,
 .contact__socials__item:focus-within .fab {
-  color: #8574cb;
+  color: #8574CB;
 }
 
 .contact__socials__item .fab {
@@ -1034,7 +1039,7 @@ header {
 
 .contact form > div:focus-within::before {
   left: calc(100% - 8px);
-  background: #8574cb;
+  background: #8574CB;
 }
 
 .contact input:focus + label,
@@ -1075,7 +1080,7 @@ header {
 .contact textarea:focus {
   outline: none;
   border: 1px solid transparent;
-  border-bottom: 1px solid #8574cb;
+  border-bottom: 1px solid #8574CB;
 }
 
 .contact input:valid + label,
@@ -1113,8 +1118,8 @@ header {
 }
 
 footer .copyright {
-  font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 13px;
+  font-size: 1.3rem;
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -1124,12 +1129,12 @@ footer .copyright {
 }
 
 footer .copyright a {
-  font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 13px;
+  font-size: 1.3rem;
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #8574cb;
+  color: #8574CB;
 }
 
 @media (max-width: 1200px) {

@@ -6,11 +6,13 @@
   <script src="https://kit.fontawesome.com/ffe844f662.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Limelight&family=Major+Mono+Display&family=Open+Sans:wght@300;400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./style/style.css">
+  <link type="image/png" href="assets/favicon.png" rel="icon">
   <title>vincci the dev</title>
 </head>
+
 <body>
   <header class="wrapper">
-    <h1 class="logo">Vincci</h1>
+    <h1 class="logo"><span class="logo__v">V</span>incci</h1>
     <nav class="nav">
       <!-- skip link -->
       <a href="#main" class="skip-link visuallyHidden">skip to main content</a>
@@ -39,13 +41,13 @@
           <p class="hero__greeting">hey, i'm</p>
           <h2 class="hero__name">vincci tsui
             <span class="hero__title txt-rotate" data-period="2000"
-            data-rotate='[ "front-end", "dev" ]'></span>
+            data-rotate='[ "front-end", "dev" ]' aria-label="front-end dev" aria-hidden></span>
           </h2>
         </div>
       </section>
 
       <section class="about-section" id="about">
-        <h2>me<span class="ascii">¯\(°‿o)/¯</span></h2>
+        <h2>me<span class="ascii" aria-label="shrug smiley face emoji" aria-hidden>¯\(°‿o)/¯</span></h2>
         <div class="about">
           <div class="about__photo-container">
             <img class="about__photo" src="./assets/portrait-photo.jpg" alt="">
@@ -62,7 +64,7 @@
       </section> <!-- .about-section -->
       
       <section class="projects-section" id="projects">
-        <h2>i made this<span class="ascii">ψ(._. )></span></h2>
+        <h2>i made this<span class="ascii" aria-label="trident looking down emoji" aria-hidden>ψ(._. )></span></h2>
         <div class="projects">
           <div class="projects__card">
             <div class="card__img-container container">
@@ -155,7 +157,7 @@
       </section> <!-- .projects-section -->
 
       <section class="tools-section" id="skills">
-        <h2>i know this<span class="ascii">ᕦ(ò‿óˇ)ᕥ</span></h2>
+        <h2>i know this<span class="ascii" aria-label="flexing emoji" aria-hidden>ᕦ(ò‿óˇ)ᕥ</span></h2>
         <ul class="tools"> 
           <li class="tools__card">
             <img class="skill" src="./assets/html-5.svg" alt="html 5 logo">
@@ -201,7 +203,7 @@
       </section> <!-- .tools-section -->
 
       <section class="contact-section" id="contact">
-        <h2>let's chat<span class="ascii">(っ´Ι`)っ  ԅ(¯﹃¯ԅ)</span></h2>
+        <h2>let's chat<span class="ascii" aria-label="2 people talking emoji" aria-hidden>(っ´Ι`)っ  ԅ(¯﹃¯ԅ)</span></h2>
         <div class="contact">
           <div class="contact__thanks">
             <p class="contact__text">Thanks for checking out my work! If you want to talk more, feel free to connect with me.</p>
@@ -247,7 +249,7 @@
         </div>
       </section>
       <footer>
-        <p class="copyright">design by <a target="_blank" href="https://themeforest.net/user/themewisdom">ThemeWisdom</a> code by <a target="_blank" href="https://twitter.com/vinccimantsui">vinccimantsui</a> © 2020</p>
+        <p class="copyright">design by <a target="_blank" href="https://themeforest.net/user/themewisdom">ThemeWisdom</a> code by <a target="_blank" href="https://twitter.com/vinccimantsui">vinccimantsui</a> <i class="far fa-copyright" aria-label="copyright" aria-hidden></i> 2020</p>
       </footer>
     </main>
     
