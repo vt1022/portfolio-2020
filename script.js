@@ -1,5 +1,22 @@
 const vt = {};
 
+vt.sideNav = function() {
+  // scroll to section
+  $('.nav-vertical__btn').on('click', function() {
+    $('html, body').animate({
+      scrollTop: $(`#${$(this).text()}`).offset().top - 65,
+    }, 400, 'linear');
+  })
+}
+
+vt.copyToClipboard = function(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
 vt.TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -52,20 +69,15 @@ vt.textAnimation = function() {
   }
 }
 
-vt.sideNav = function() {
-  // scroll to section
-  $('.nav-vertical__btn').on('click', function() {
-    $('html, body').animate({
-      scrollTop: $(`#${$(this).text()}`).offset().top - 65,
-    }, 400, 'linear');
-  })
-}
-
 vt.init = function() {
   // remove focus on mouseleave
-  $('button, a, .container').on( "mouseleave", function() {
+  $('button, a, .container').on('mouseleave', function() {
     $(this).blur();
   });
+  // copy email to clipboard on click
+  $('.fa-copy, .contact__email').on('click', function() {
+    vt.copyToClipboard('.contact__email');
+  })
   vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
   vt.sideNav();
 }

@@ -6,7 +6,7 @@
   .skill {
     height: 30px;
     margin-right: 2rem;
-    filter: grayscale(1);
+    filter: saturate(0.7);
   }
 
   &__card {
@@ -49,10 +49,6 @@
       color: $color1;
     }
   
-    &__description {
-  
-    }
-  
     &__languages {
       display: flex;
       margin-top: 15px;
@@ -63,7 +59,7 @@
       position: relative;
       left: 50%;
       display: block;
-      width: 100% / $phi;
+      width: 100%;
       
       text-align: center;
       transform: translateX(-50%);

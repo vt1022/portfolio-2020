@@ -21,8 +21,6 @@
     }
 
     &__photo {
-      position: relative;
-      top: -50px;
       object-fit: cover;
     }
 
@@ -56,10 +54,24 @@
   }
 }
 
-@media (max-width: 695px) {
+@media (max-width: 735px) {
+  .contact {
+    &__thanks {
+      width: 100%;
+    }
 
+    form {
+      width: 100%;
+    }
+
+    textarea {
+      height: 200px;
+    }
+  }
 }
 
-@media (max-width: 585px) {
-  
+@media (max-width: 380px) {
+  .about__photo-container {
+    height: auto;
+  }
 }

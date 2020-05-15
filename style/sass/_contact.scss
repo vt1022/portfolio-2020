@@ -1,18 +1,49 @@
 .contact {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   h2 {margin-top: 0;}
 
+  .fa-copy {
+    color: $color1;
+    cursor: pointer;
+    &:active {transform: translate(2px, 2px);}
+  }
+
   &__thanks {
     width: calc( 50% - 1rem);
+    margin-bottom: 20px;
   }
 
-  &__text {
-    margin-top: 0;
+  &__text {margin-top: 0;}
+  &__socials {display: flex;}
+
+  &__socials__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    padding-top: 5px;
+    height: 60px;
+    width: 60px;
+    border: 1px solid $grey;
+
+    &:hover .fab, 
+    &:focus .fab, 
+    &:focus-within .fab {
+      color: $color1;
+    }
+
+    .fab {
+      @include fontSize(50);
+      transition: all 0.3s ease-in;
+    }
+
+    a::before{content: none;}
   }
 
-  // form stuff ///////////////////////
   form {
     width: calc( 50% - 1rem);
     font-size: 0;
@@ -58,9 +89,7 @@
     border-bottom: 1px solid $grey;
     transition: all 0.3s ease-in;
 
-    &:required {
-      box-shadow:none;
-    }
+    &:required {box-shadow:none;}
 
     &:focus {
       outline: none;
@@ -93,5 +122,4 @@
   }
 
   button {width: 100%;}
-  // form stuff ///////////////////////////////
 }

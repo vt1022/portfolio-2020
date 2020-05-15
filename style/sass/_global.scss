@@ -24,6 +24,7 @@ button, .button {
   margin: 0;
 
   background: none;
+  text-transform: lowercase;
   transition: all 0.3s ease-in;
 
   &::before {
@@ -36,7 +37,7 @@ button, .button {
     transition: all 0.3s ease-in;
   }
 
-  &:hover, &:focus {
+  &:hover, &:focus, &:focus-within {
     border: 1px solid $color1;
     color: $color1;
 
@@ -69,7 +70,7 @@ a {
   color: $color1;
   transition: all 0.3s ease-in;
 
-  &:hover {
+  &:hover, &:focus {
     color: $white;
 
     &::before {
