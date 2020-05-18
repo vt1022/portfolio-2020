@@ -1,4 +1,6 @@
 footer {
+  padding-right: 2rem;
+  
   .copyright {
     @include fontBody(13);
     text-align: right;

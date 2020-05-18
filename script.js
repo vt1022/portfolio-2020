@@ -70,9 +70,9 @@ vt.textAnimation = function() {
 }
 
 vt.init = function() {
-  AOS.init({ // init/load aos
-    duration: 800, 
-  }); //load aos library
+  particlesJS.load('particles-js', './assets/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
   vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
   vt.sideNav();
   // remove focus on mouseleave

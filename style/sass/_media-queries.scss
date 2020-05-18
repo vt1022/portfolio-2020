@@ -43,10 +43,6 @@
     }
   }
 
-  .hero {
-    left: 15px;
-  }
-
   .about {
     flex-direction: column;
 
@@ -87,18 +83,18 @@
 /////////////////////////////////////////
 @media (max-width: 735px) {
   .nav__toggle-input:checked ~ ul {width: 50%;}
-  
   .contact {
     &__thanks, form {width: 100%;}
     textarea {height: 200px;}
   }
 
-  section:not(.hero-section) {margin: 150px 0;}
+  section:not(.hero-section) {margin-bottom: 150px;}
   section:last-of-type {margin-bottom: 0; padding-bottom: 100px;}
 }
 /////////////////////////////////////////
 @media (max-width: 550px) {
   .wrapper, .main::before {width: 95%;}
+  .hero {left: 54%;}
   .tools__card {min-width: 80px;}
   .tools .skills {height: 40px;}
 }
