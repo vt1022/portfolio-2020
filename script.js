@@ -71,7 +71,7 @@ vt.textAnimation = function() {
 
 vt.init = function() {
   AOS.init({ // init/load aos
-    duration: 1200, 
+    duration: 800, 
   }); //load aos library
   vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
   vt.sideNav();
@@ -80,7 +80,7 @@ vt.init = function() {
     $(this).blur();
   });
   // copy email to clipboard on click
-  $('.fa-copy, .contact__email').on('click', function() {
+  $('.fa-copy').on('click', function() {
     vt.copyToClipboard('.contact__email');
   })
   // close hamburger on link click

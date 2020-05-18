@@ -46,8 +46,9 @@ $color2: #8574CB;
 
 @mixin fontTitle($size, $weight: 400, $color: $white) {
   @include fontSize($size);
-  font-family: 'Limelight', cursive;
-  // font-family: 'Saira Stencil One', cursive;
+  // font-family: 'Limelight', cursive;
+  // font-family: 'Major Mono Display', monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: $weight;
   color: $color;
 }
