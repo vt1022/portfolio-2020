@@ -431,6 +431,10 @@ h2, h3 {
   text-transform: lowercase;
 }
 
+h2 {
+  font-weight: 700;
+}
+
 h2::before {
   position: absolute;
   content: '';
@@ -439,7 +443,7 @@ h2::before {
   width: 100%;
   top: 3rem;
   z-index: -1;
-  height: 0.5px;
+  height: 1px;
   background: #dddddd;
 }
 
@@ -692,8 +696,6 @@ header {
           align-items: center;
   position: relative;
   height: 90vh;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
   margin-bottom: 200px;
 }
 

@@ -101,6 +101,7 @@ h1 {
   margin-top: 0;
 }
 
+
 h2, h3 {
   @include fontTitle(28, 400, $color1);
   position: relative;
@@ -108,11 +109,12 @@ h2, h3 {
   text-transform: lowercase;
 }
 
+h2 {font-weight: 700;}
 h2::before {
   @include pseudo;
   top: 3rem;
   z-index: -1;
-  height: 0.5px;
+  height: 1px;
   background: $white;
 }
 
