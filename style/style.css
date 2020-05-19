@@ -271,10 +271,6 @@ html {
   color: #cc1;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 img {
   display: block;
 }
