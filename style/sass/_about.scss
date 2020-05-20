@@ -28,4 +28,11 @@
       background: $color1;
     }
   }
+
+  &__btn {
+    display: inline-block;
+    width: calc(50% - 1em);
+    text-align: center;
+    &:first-of-type {margin-right: 1em; margin-bottom: 1em;}
+  }
 }

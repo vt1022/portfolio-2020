@@ -286,8 +286,8 @@ ul, ol, li {
 }
 
 button, .button {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 19px;
+  font-size: 1.9rem;
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -768,6 +768,17 @@ header {
   width: 115%;
   right: 15%;
   background: #55ccc0;
+}
+
+.about__btn {
+  display: inline-block;
+  width: calc(50% - 1em);
+  text-align: center;
+}
+
+.about__btn:first-of-type {
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
 
 .projects {
@@ -1290,6 +1301,10 @@ footer .copyright a:hover {
   }
   .hero {
     left: 54%;
+  }
+  .about__btn {
+    width: 100%;
+    margin-right: 0;
   }
   .tools__card {
     min-width: 80px;

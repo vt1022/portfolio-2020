@@ -9,7 +9,7 @@ ul, ol, li {
 }
 
 button, .button {
-  @include fontBody(16, 400, $color1);
+  @include fontBody(19, 400, $color1);
   position: relative;
 
   padding: 0;
