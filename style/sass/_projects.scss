@@ -18,6 +18,9 @@
   }
 
   .card {
+    &__description {
+      color: lighten($color: $grey, $amount: 30);
+    }
 
     &__info-container {
       position: relative;
@@ -30,8 +33,6 @@
       &::before {
         @include pseudo;
         top: 3rem;
-        left: initial;
-        right: 0;
         height: 5px;
         width: 8px;
         background: $grey;
@@ -46,7 +47,7 @@
 
     &__title {
       margin: 0;
-      color: $color2;
+      color: $white;
     }
   
     &__languages {
