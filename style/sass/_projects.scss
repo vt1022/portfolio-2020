@@ -32,7 +32,7 @@
 
       &::before {
         @include pseudo;
-        top: 3rem;
+        top: 3.2rem;
         height: 5px;
         width: 8px;
         background: $grey;
@@ -40,14 +40,13 @@
 
       &::after {
         @include pseudo;
-        top: 3rem;
+        top: 3.2rem;
         border-bottom: 1px solid $grey;
       }
     }
 
     &__title {
       margin: 0;
-      color: $white;
     }
   
     &__languages {

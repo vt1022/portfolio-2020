@@ -417,8 +417,8 @@ h1 {
 }
 
 h2, h3 {
-  font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 30px;
+  font-size: 3rem;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
   color: #55ccc0;
@@ -429,6 +429,7 @@ h2, h3 {
 
 h2 {
   font-weight: 700;
+  letter-spacing: -0.05em;
 }
 
 h2::before {
@@ -453,6 +454,10 @@ h2::after {
   height: 4px;
   width: 8px;
   background: #dddddd;
+}
+
+h3 {
+  text-transform: uppercase;
 }
 
 .main::before {
@@ -836,7 +841,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  top: 3rem;
+  top: 3.2rem;
   height: 5px;
   width: 8px;
   background: #5f5f5f;
@@ -848,13 +853,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  top: 3rem;
+  top: 3.2rem;
   border-bottom: 1px solid #5f5f5f;
 }
 
 .projects .card__title {
   margin: 0;
-  color: #dddddd;
 }
 
 .projects .card__languages {
@@ -1027,6 +1031,13 @@ header {
 .contact__socials__item .fab {
   font-size: 50px;
   font-size: 5rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.contact__socials__item .far {
+  font-size: 46px;
+  font-size: 4.6rem;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }

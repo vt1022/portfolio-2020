@@ -102,27 +102,35 @@ h1 {
 
 
 h2, h3 {
-  @include fontTitle(28, 400, $color1);
+  @include fontTitle(30, 400, $color1);
   position: relative;
   margin-top: 0;
   text-transform: lowercase;
 }
 
-h2 {font-weight: 700;}
-h2::before {
-  @include pseudo;
-  top: 1.1em;
-  z-index: -1;
-  height: 1px;
-  background: $white;
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+
+  &::before {
+    @include pseudo;
+    top: 1.1em;
+    z-index: -1;
+    height: 1px;
+    background: $white;
+  }
+
+  &::after {
+    @include pseudo;
+    top: 1.1em;
+    height: 4px;
+    width: 8px;
+    background: $white;
+  }
 }
 
-h2::after {
-  @include pseudo;
-  top: 1.1em;
-  height: 4px;
-  width: 8px;
-  background: $white;
+h3 {
+  text-transform: uppercase;
 }
 
 .main::before {
