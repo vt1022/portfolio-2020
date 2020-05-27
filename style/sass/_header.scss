@@ -16,14 +16,11 @@ header {
 }
 
 .nav {
-  position: absolute;
-  top: 50vh / $phi;
-  right: 95%;
-
   // hamburger starts
+  &__toggle-input {display: none;}
   &__toggle-label {
     position: relative;
-    top: -10000px;
+    top: 0px;
     z-index: 12;
     transition: 0.5s;
 
@@ -40,6 +37,14 @@ header {
   }
 
   &__links {
+    position: fixed;
+    top: 0;
+    right: -200%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     transition: all 0.5s ease-in-out;
 
     &::before {
@@ -92,7 +97,16 @@ header {
     }
   }
 
-  &__toggle-input{ display: none; }
+  &__toggle-input:checked ~ ul {
+    z-index: 2;
+    top: 0;
+    right: 0;
+    
+    width: 30%;
+    height: 100%;
+
+    background: $black;
+  }
 
   .hamburger {
     display: flex;
@@ -127,7 +141,7 @@ header {
 
   // hamburger animation starts 
   &__toggle-input:checked + label > .hamburger > .line1 {
-    width: 100%;
+    width: 50px;
     transform: translateY(20px) rotate(405deg);
     // border-radius: 30px;
   }
@@ -137,7 +151,7 @@ header {
   }
 
   &__toggle-input:checked + label > .hamburger > .line3 {
-    width: 100%;
+    width: 50px;
     transform: translateY(-4px) rotate(-405deg);
   }
   // hamburger animation ends

@@ -8,30 +8,8 @@
 @media (max-width: 950px) {
   .main {margin-left: 0;}
   .nav {
-    position: initial;
     &__toggle-label {top: 0px;}
-    
-    &__toggle-input:checked ~ ul {
-      z-index: 2;
-      top: 0;
-      right: 0;
-      
-      width: 30%;
-      height: 100%;
-  
-      background: $black;
-    }
-
     &__links {
-      position: fixed;
-      top: 0;
-      right: -200%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-  
       &__btn::before {
         height: 6px;
         width: 12px;

@@ -514,15 +514,13 @@ header {
   color: #55ccc0;
 }
 
-.nav {
-  position: absolute;
-  top: 30.9017vh;
-  right: 95%;
+.nav__toggle-input {
+  display: none;
 }
 
 .nav__toggle-label {
   position: relative;
-  top: -10000px;
+  top: 0px;
   z-index: 12;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -541,6 +539,21 @@ header {
 }
 
 .nav__links {
+  position: fixed;
+  top: 0;
+  right: -200%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -604,8 +617,13 @@ header {
   border-bottom: 1px solid #55ccc0;
 }
 
-.nav__toggle-input {
-  display: none;
+.nav__toggle-input:checked ~ ul {
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: #000;
 }
 
 .nav .hamburger {
@@ -654,7 +672,7 @@ header {
 }
 
 .nav__toggle-input:checked + label > .hamburger > .line1 {
-  width: 100%;
+  width: 50px;
   -webkit-transform: translateY(20px) rotate(405deg);
           transform: translateY(20px) rotate(405deg);
 }
@@ -664,7 +682,7 @@ header {
 }
 
 .nav__toggle-input:checked + label > .hamburger > .line3 {
-  width: 100%;
+  width: 50px;
   -webkit-transform: translateY(-4px) rotate(-405deg);
           transform: translateY(-4px) rotate(-405deg);
 }
@@ -1187,36 +1205,8 @@ footer .copyright a:hover {
   .main {
     margin-left: 0;
   }
-  .nav {
-    position: initial;
-  }
   .nav__toggle-label {
     top: 0px;
-  }
-  .nav__toggle-input:checked ~ ul {
-    z-index: 2;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    background: #000;
-  }
-  .nav__links {
-    position: fixed;
-    top: 0;
-    right: -200%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
   }
   .nav__links__btn::before {
     height: 6px;
