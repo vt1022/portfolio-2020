@@ -12,9 +12,7 @@ header {
   @include fontLogo(32);
   width: 80%;
   margin: 10px 0;
-  color: $white;
-
-  &__v {color: $color1;}
+  color: $color1;
 }
 
 .nav {
