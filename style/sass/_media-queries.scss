@@ -6,7 +6,6 @@
 }
 /////////////////////////////////////////
 @media (max-width: 950px) {
-  .main {margin-left: 0;}
   .nav {
     &__toggle-label {top: 0px;}
     &__links {
@@ -70,7 +69,9 @@
 }
 /////////////////////////////////////////
 @media (max-width: 550px) {
+  section:not(.hero-section) {padding-right: 0;}
   .wrapper, .main::before {width: 95%;}
+  .main {border: 0;}
   .hero {left: 54%;}
   .about__btn {width: 100%; margin-right: 0;}
   .tools__card {min-width: 80px;}

@@ -70,9 +70,11 @@ vt.textAnimation = function() {
 }
 
 vt.init = function() {
+  AOS.init();
   particlesJS.load('particles-js', './assets/particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
   });
+  
   vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
   vt.sideNav();
   // remove focus on mouseleave
@@ -89,6 +91,6 @@ vt.init = function() {
   })
 }
 
-$(function() { 
+$(function() {
   vt.init();
 });

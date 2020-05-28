@@ -697,7 +697,6 @@ header {
   top: 3%;
   border-right: 1px solid #dddddd;
   margin: 0 auto;
-  margin-left: 5%;
 }
 
 .hero-section {
@@ -1199,9 +1198,6 @@ footer .copyright a:hover {
 }
 
 @media (max-width: 950px) {
-  .main {
-    margin-left: 0;
-  }
   .nav__toggle-label {
     top: 0px;
   }
@@ -1286,8 +1282,14 @@ footer .copyright a:hover {
 }
 
 @media (max-width: 550px) {
+  section:not(.hero-section) {
+    padding-right: 0;
+  }
   .wrapper, .main::before {
     width: 95%;
+  }
+  .main {
+    border: 0;
   }
   .hero {
     left: 54%;
