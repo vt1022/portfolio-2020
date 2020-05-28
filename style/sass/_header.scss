@@ -54,6 +54,9 @@ header {
       border-left: 1px solid $grey;
     }
 
+    li {border-bottom: 1px solid $grey;}
+    li:first-of-type {border-top: 1px solid $grey;}
+    
     &__btn {
       @include fontSize(30);
       position: relative;

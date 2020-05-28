@@ -6,19 +6,6 @@
 }
 /////////////////////////////////////////
 @media (max-width: 950px) {
-  .nav {
-    &__toggle-label {top: 0px;}
-    &__links {
-      &__btn::before {
-        height: 6px;
-        width: 12px;
-      }
-      
-      li {border-bottom: 1px solid $grey;}
-      li:first-of-type {border-top: 1px solid $grey;}
-    }
-  }
-
   .about {
     flex-direction: column;
 
