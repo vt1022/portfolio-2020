@@ -392,7 +392,7 @@ a::before {
   bottom: calc(20% + 3px);
   z-index: -1;
   height: 1px;
-  width: 6px;
+  width: 0;
   background: #dddddd;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -504,8 +504,8 @@ header {
 }
 
 .logo {
-  font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 35px;
+  font-size: 3.5rem;
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
   color: #dddddd;
@@ -641,6 +641,7 @@ header {
   z-index: 10;
   height: 25px;
   width: 9vw;
+  max-width: 120px;
   min-width: 30px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;

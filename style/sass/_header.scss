@@ -9,7 +9,7 @@ header {
 } // header
 
 .logo {
-  @include fontLogo(32);
+  @include fontLogo(35);
   width: 80%;
   margin: 10px 0;
   color: $color1;
@@ -116,6 +116,7 @@ header {
     z-index: 10;
     height: 25px;
     width: 9vw;
+    max-width: 120px;
     min-width: 30px;
 
     transition: 0.5s ease;
