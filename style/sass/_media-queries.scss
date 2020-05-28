@@ -15,7 +15,6 @@
         width: 12px;
       }
       
-      &__btn {@include fontSize(30);}
       li {border-bottom: 1px solid $grey;}
       li:first-of-type {border-top: 1px solid $grey;}
     }
