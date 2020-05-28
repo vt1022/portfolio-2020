@@ -45,7 +45,7 @@
 }
 /////////////////////////////////////////
 @media (max-width: 735px) {
-  .nav__toggle-input:checked ~ ul {width: 50%;}
+  .nav__toggle-input:checked ~ .nav__links {width: 50%;}
   .contact {
     &__thanks, form {width: 100%;}
     textarea {height: 200px;}
@@ -67,7 +67,7 @@
 }
 /////////////////////////////////////////
 @media (max-width: 450px) {
-  .nav__toggle-input:checked ~ ul {width: 75%;}
+  .nav__toggle-input:checked ~ .nav__links {width: 75%;}
 }
 /////////////////////////////////////////
 @media (max-width: 380px) {

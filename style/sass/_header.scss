@@ -54,9 +54,13 @@ header {
       border-left: 1px solid $grey;
     }
 
-    li {border-bottom: 1px solid $grey;}
     li:first-of-type {border-top: 1px solid $grey;}
-    
+    li {
+      width: 0;
+      border-bottom: 1px solid $grey;
+      transition: all 1.2s ease-in-out;
+    }
+
     &__btn {
       @include fontSize(30);
       position: relative;
@@ -99,7 +103,7 @@ header {
     }
   }
 
-  &__toggle-input:checked ~ ul {
+  &__toggle-input:checked ~ &__links {
     z-index: 2;
     top: 0;
     right: 0;
@@ -108,6 +112,10 @@ header {
     height: 100%;
 
     background: $black;
+  }
+
+  &__toggle-input:checked ~ &__links li {
+    width: 100%;
   }
 
   .hamburger {
@@ -146,7 +154,6 @@ header {
   &__toggle-input:checked + label > .hamburger > .line1 {
     width: 50px;
     transform: translateY(20px) rotate(405deg);
-    // border-radius: 30px;
   }
 
   &__toggle-input:checked + label > .hamburger > .line2 {
@@ -156,6 +163,19 @@ header {
   &__toggle-input:checked + label > .hamburger > .line3 {
     width: 50px;
     transform: translateY(-4px) rotate(-405deg);
+  }
+  // li staggered entrance animations start
+  &__links li:nth-child(2) {
+    transition: all 1.6s ease-in-out;
+  }
+  &__links li:nth-child(3) {
+    transition: all 1.8s ease-in-out;
+  }
+  &__links li:nth-child(4) {
+    transition: all 2s ease-in-out;
+  }
+  &__links li:nth-child(5) {
+    transition: all 2.2s ease-in-out;
   }
   // hamburger animation ends
 
