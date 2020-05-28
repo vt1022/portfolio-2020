@@ -73,7 +73,8 @@
   .wrapper, .main::before {width: 95%;}
   .main {border: 0;}
   .hero {left: 54%;}
-  .about__btn {width: 100%; margin-right: 0;}
+  .about__btn {width: 100%;}
+  .about__btn:first-of-type {margin-right: 0;}
   .tools__card {min-width: 80px;}
   .tools .skills {height: 40px;}
 }

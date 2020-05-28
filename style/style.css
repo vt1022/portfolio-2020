@@ -509,7 +509,6 @@ header {
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;
   color: #dddddd;
-  width: 80%;
   margin: 10px 0;
   color: #55ccc0;
 }
@@ -1296,6 +1295,8 @@ footer .copyright a:hover {
   }
   .about__btn {
     width: 100%;
+  }
+  .about__btn:first-of-type {
     margin-right: 0;
   }
   .tools__card {
