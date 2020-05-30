@@ -1,11 +1,13 @@
 const vt = {};
 
-vt.sideNav = function() {
-  // scroll to section
+vt.navBar = function() {
   $('.nav__links__btn').on('click', function() {
+    // scroll to section
     $('html, body').animate({
       scrollTop: $(`#${$(this).text()}`).offset().top - 65,
     }, 400, 'linear');
+    // close hamburger on link click:
+    $("#toggle").prop("checked", false);
   })
 }
 
@@ -70,23 +72,19 @@ vt.textAnimation = function() {
 }
 
 vt.init = function() {
+  vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
+  vt.navBar();
+  // load particles-js:
   particlesJS.load('particles-js', './assets/particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
   });
-
-  vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
-  vt.sideNav();
-  // remove focus on mouseleave
+  // remove focus on mouseleave:
   $('button, a, .container').on('mouseleave', function() {
     $(this).blur();
   });
-  // copy email to clipboard on click
+  // copy email to clipboard on click:
   $('.fa-copy').on('click', function() {
     vt.copyToClipboard('.contact__email');
-  })
-  // close hamburger on link click
-  $('.nav__links__btn').on('click', function() {
-    $("#toggle").prop("checked", false);
   })
 }
 
