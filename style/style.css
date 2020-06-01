@@ -1068,7 +1068,10 @@ header {
 
 .contact__socials__item:hover .fab,
 .contact__socials__item:focus .fab,
-.contact__socials__item:focus-within .fab {
+.contact__socials__item:focus-within .fab,
+.contact__socials__item:hover .far,
+.contact__socials__item:focus .far,
+.contact__socials__item:focus-within .far {
   color: #8574CB;
 }
 

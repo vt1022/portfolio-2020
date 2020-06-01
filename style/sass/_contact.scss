@@ -33,7 +33,10 @@
 
     &:hover .fab, 
     &:focus .fab, 
-    &:focus-within .fab {
+    &:focus-within .fab,
+    &:hover .far, 
+    &:focus .far, 
+    &:focus-within .far {
       color: $color2;
     }
 
