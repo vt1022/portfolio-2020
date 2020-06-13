@@ -1,17 +1,19 @@
-header {
-  @include flexCenter;
-  justify-content: space-between;
+.header {
   position: sticky;
   top: 0;
-  height: 57px;
   z-index: 10;
-  background: $black;
+  height: 57px;
+  background: $grey;
+
+  .wrapper {
+    @include flexCenter;
+    justify-content: space-between;
+  }
 } // header
 
 .logo {
-  @include fontLogo(35);
+  @include fontLogo(35, 600, $color1);
   margin: 10px 0;
-  color: $color1;
 }
 
 .nav {

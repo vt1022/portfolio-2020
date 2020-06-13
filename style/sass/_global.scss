@@ -1,6 +1,6 @@
 ::selection {color: #00ff0d;}
 img {display: block;}
-body {background: $black;}
+body {background: $white;}
 
 ul, ol, li {
   padding: 0;
@@ -33,7 +33,7 @@ button, .button {
 
   &:hover, &:focus, &:focus-within {
     border: 1px solid $color1;
-    color: $white;
+    color: $black;
     outline: none;
 
     &::before {
@@ -66,7 +66,7 @@ a {
   transition: all 0.3s ease-in;
 
   &:hover, &:focus {
-    color: $white;
+    color: $black;
 
     &::before {
       width: 100%;
@@ -82,17 +82,13 @@ a::before {
   z-index: -1;
   height: 1px;
   width: 0;
-  background: $white;
+  background: $black;
   transition: all 0.3s ease-in;
 }
 
 button a::before,
 div > a::before {
   content: none;
-}
-
-h1, h2, h3, p, span, i {
-  color: $white;
 }
 
 h1 {
@@ -117,7 +113,7 @@ h2 {
     top: 1.1em;
     z-index: -1;
     height: 1px;
-    background: $white;
+    background: $black;
   }
 
   &::after {
@@ -125,7 +121,7 @@ h2 {
     top: 1.1em;
     height: 4px;
     width: 8px;
-    background: $white;
+    background: $black;
   }
 }
 
@@ -133,20 +129,9 @@ h3 {
   text-transform: uppercase;
 }
 
-.main::before {
-  @include pseudo;
-  position: fixed;
-  top: 57px;
-  right: 0;
-  z-index: 1;
-  max-width: 1200px;
-  width: 80%;
-  margin: 0 auto;
-  border-top: 1px solid $white;
-}
 
 .wrapper {
   max-width: 1200px;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
