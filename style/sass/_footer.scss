@@ -1,14 +1,16 @@
-footer {
-  padding-right: 2rem;
+.footer {
+  padding: 6px 0;
+  background: lighten($color: $black, $amount: 15);
+  border-top: 1px solid $grey;
   
   .copyright {
-    @include fontBody(13);
-    text-align: right;
-    margin: 2px 0;
+    @include fontBody(16, 400, $white);
+    text-align: center;
+    margin: 3px 0 0 0;
   }
 
   .copyright a {
-    @include fontBody(13, 400, $color1);
+    @include fontBody(16, 400, $color1);
     &:hover {color: $white;}
   }
 }

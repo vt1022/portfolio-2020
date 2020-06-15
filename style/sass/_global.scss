@@ -108,16 +108,16 @@ h2 {
   &::before {
     @include pseudo;
     top: 1.1em;
-    z-index: -1;
-    height: 1px;
+    height: 4px;
+    width: 8px;
     background: $black;
   }
 
   &::after {
     @include pseudo;
     top: 1.1em;
-    height: 4px;
-    width: 8px;
+    z-index: -1;
+    height: 1px;
     background: $black;
   }
 }

@@ -9,6 +9,7 @@ $grey: #7c7c7c;
 $white: #ffffff;
 $color1: #55ccc0;
 $color2: #8574CB;
+$textBlack: #252525;
 
 // mixins
 
@@ -26,14 +27,14 @@ $color2: #8574CB;
   font-size: ($sizeValue/10) * 1rem;
 }
 
-@mixin fontLogo($size, $weight: 400, $color: $black) {
+@mixin fontLogo($size, $weight: 400, $color: $textBlack) {
   @include fontSize($size);
   font-family: 'Limelight', cursive;
   font-weight: $weight;
   color: $color;
 }
 
-@mixin fontBody($size, $weight: 400, $color: $black) {
+@mixin fontBody($size, $weight: 400, $color: $textBlack) {
   @include fontSize($size);
   font-family: 'Khula', sans-serif;
   line-height: 1.6;
@@ -41,7 +42,7 @@ $color2: #8574CB;
   color: $color;
 }
 
-@mixin fontTitle($size, $weight: 400, $color: $black) {
+@mixin fontTitle($size, $weight: 400, $color: $textBlack) {
   @include fontSize($size);
   font-family: 'Limelight', cursive;
   font-weight: $weight;
