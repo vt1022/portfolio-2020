@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/ffe844f662.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Limelight&family=Major+Mono+Display&family=Open+Sans:wght@300;400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Limelight&family=Major+Mono+Display&family=Open+Sans:wght@300;400;700" rel="stylesheet">
   <link rel="stylesheet" href="./style/style.css">
   <link type="image/png" href="assets/favicon.png" rel="icon">
   <title>vincci the dev</title>
 </head>
 
 <body>
+  
+
   <header class="header">
     <div class="wrapper">
       <h1 class="logo">vincci</h1>
@@ -38,10 +40,12 @@
   </header>
 
   <section class="hero">
-    <p class="hero__greeting">hey, i'm</p>
-    <h2 class="hero__name">vincci <span class="hero__name__last">tsui</span>
-    </h2>
-    <h2 class="hero__title">front end developer</h2>
+    <div class="hero__container">
+      <p class="hero__greeting">hey, i'm</p>
+      <h2 class="hero__name">vincci <span class="hero__name__last">tsui</span>
+      </h2>
+      <h2 class="hero__title">front end developer</h2>
+    </div>
   </section>
 
   <div class="wrapper">
@@ -67,7 +71,7 @@
       </section> <!-- .about-section -->
       
       <section class="tools-section" id="skills">
-        <h2>i know this <span class="ascii" aria-label="flexing emoji" aria-hidden=true>ᕦ(ò‿óˇ)ᕥ</span></h2>
+        <h2>My Tools <span class="ascii" aria-label="flexing emoji" aria-hidden=true>ᕦ(ò‿óˇ)ᕥ</span></h2>
         <ul class="tools"> 
           <li class="tools__card">
             <img class="skill" src="./assets/react.svg" alt="react logo">
@@ -129,7 +133,7 @@
       </section> <!-- .tools-section -->
 
       <section class="projects-section" id="projects">
-        <h2>i made this <span class="ascii" aria-label="trident looking down emoji" aria-hidden=true>ψ(._. )></span></h2>
+        <h2>My Work <span class="ascii" aria-label="trident looking down emoji" aria-hidden=true>ψ(._. )></span></h2>
         <div class="projects">
           <div class="projects__card">
             <div class="card__img-container container">
@@ -225,7 +229,7 @@
       </section> <!-- .projects-section -->
 
       <section class="contact-section" id="contact">
-        <h2>let's chat <span class="ascii" aria-label="waving emoji" aria-hidden=true>o(*^▽^*)┛</span></h2>
+        <h2>My Socials <span class="ascii" aria-label="waving emoji" aria-hidden=true>o(*^▽^*)┛</span></h2>
         <div class="contact">
           <div class="contact__thanks">
             <p class="contact__text">Thanks for checking out my work! If you want to talk more, feel free to connect with me.</p>
@@ -282,11 +286,14 @@
     
   </div> <!-- wrapper -->
 
+
   <!-- jquery -->
   <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <!-- particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="particles.js"></script>
   <script src="./script.js"></script>
+  
+
 </body>
 </html>

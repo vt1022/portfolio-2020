@@ -1,6 +1,12 @@
 .main {
-  position: relative;
-  top: 3%;
-  border-right: 1px solid $white;
-  margin: 0 auto;
+  display: grid;
+  grid-gap: 100px;
+  margin: 50px 0;
+}
+
+[class*="-section"] {
+  // border-bottom: 3px solid $grey;
+  // border-right: 3px solid $grey;
+  // padding: 3em;
+  // background: $white;
 }

@@ -44,14 +44,11 @@ button, .button {
   }
 }
 
-section:not(.hero-section) {margin-bottom: 200px; padding-right: 2rem;}
-section:nth-of-type(2) {margin-top: 0;}
-section:last-of-type {margin-bottom: 0; padding-bottom: 150px;}
-
 .ascii {
-  @include fontBody(16);
+  @include fontSize(19);
   font-family: 'Courier New', Courier, monospace;
-  line-height: 0;
+  color: $grey;
+  vertical-align: middle;
   white-space: nowrap;
 }
 
@@ -98,10 +95,10 @@ h1 {
 
 
 h2, h3 {
-  @include fontTitle(30, 400, $color1);
+  @include fontTitle(40, 400, $color1);
   position: relative;
   margin-top: 0;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 h2 {

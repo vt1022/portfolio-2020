@@ -1,37 +1,43 @@
 .hero {
   @include flexCenter;
   flex-direction: column;
-  position: relative;
-  height: 96vh;
-  margin-bottom: 200px;
+  height: calc(100vh - 57px);
   background: $black;
   
+  &__container {
+    @include flexCenter;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 57px));
+  }
+
   &__greeting {
     @include fontSize(28);
     position: relative;
-    left: 2.5em;
+    left: 2em;
     top: 0.3em;
     margin: 0 0 0 -2.5rem;
     color: $white;
-    line-height: 5px;
     text-align: center;
   }
   
   &__name {
     @include fontLogo(65, 600, $color1);
     margin: 0;
-    word-spacing: -0.3em;
+    word-spacing: 0.3em;
     white-space: nowrap;
+    text-transform: uppercase;
     &::before, &::after { content: none; }
     &__last { color: $color2; }
   }
 
   &__title {
-    @include fontLogo(25, 400, $white);
+    @include fontBody(25, 400, $white);
     display: block;
-    margin: 2px 6px 0 0;
+    margin: 8px 6px 0 0;
     text-align: right;
-    line-height: 5px;
+    line-height: 0px;
     letter-spacing: 0.7em;
     word-spacing: -0.2em;
   }

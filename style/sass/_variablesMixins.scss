@@ -5,7 +5,7 @@ $small-angle: 360 / ($phi + 1);    // 137.5
 $large-angle: 360 - $small-angle;  // 222.5
 // font colours + pseudo states
 $black: #000;
-$grey: #5f5f5f;
+$grey: #7c7c7c;
 $white: #ffffff;
 $color1: #55ccc0;
 $color2: #8574CB;
@@ -28,9 +28,7 @@ $color2: #8574CB;
 
 @mixin fontLogo($size, $weight: 400, $color: $black) {
   @include fontSize($size);
-  font-family: 'Major Mono Display', monospace;
-  // font-family: 'Limelight', cursive;
-  // font-family: 'Saira Stencil One', cursive;
+  font-family: 'Limelight', cursive;
   font-weight: $weight;
   color: $color;
 }
@@ -38,7 +36,6 @@ $color2: #8574CB;
 @mixin fontBody($size, $weight: 400, $color: $black) {
   @include fontSize($size);
   font-family: 'Khula', sans-serif;
-  // font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   font-weight: $weight;
   color: $color;
@@ -46,9 +43,7 @@ $color2: #8574CB;
 
 @mixin fontTitle($size, $weight: 400, $color: $black) {
   @include fontSize($size);
-  // font-family: 'Limelight', cursive;
-  // font-family: 'Major Mono Display', monospace;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Limelight', cursive;
   font-weight: $weight;
   color: $color;
 }
