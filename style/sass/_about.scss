@@ -2,19 +2,39 @@
   display: grid;
   grid-template-columns: ($phi * 1fr) (1fr / $phi) ($phi * 2fr);
   grid-template-rows: (1fr / $phi) ((1fr / $phi) / $phi) 1fr 1fr;
-  // align-items: center;
+  grid-gap: 2em;
 }
 
 .about {
   &__title{
     grid-column: 2 / -1;
     grid-row: 2;
+    align-self: end;
+    margin: 0;
+    margin-left: 1em;
+    background: $white;
     &::after { z-index: 1; }
   }
 
   &__photo-container {
+    position: relative;
+    z-index: -1;
     grid-column: 1 / span 2;
     grid-row: 1 / span 4;
+    border: 1px solid $grey;
+    border-top: none;
+    border-left: none;
+
+    &::after {
+      @include pseudo;
+      top: 2em;
+      left: 2em;
+      height: 100%;
+      width: (100% * $phi);
+      border: 1px solid $grey;
+      border-right: none;
+      border-bottom: none;
+    }
   }
   
   &__photo {width: 100%;} 
@@ -41,8 +61,7 @@
 
   &__btn {
     display: inline-block;
-    width: calc(50% - 1em);
+    width: 100% / $phi;
     text-align: center;
-    &:first-of-type {margin-right: 1em; margin-bottom: 1em;}
   }
 }

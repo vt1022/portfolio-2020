@@ -12,5 +12,6 @@
   .copyright a {
     @include fontBody(16, 400, $color1);
     &:hover {color: $white;}
+    &::before {z-index: 1;}
   }
 }

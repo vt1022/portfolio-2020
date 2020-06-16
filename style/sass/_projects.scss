@@ -10,67 +10,20 @@
   }
 
   &__card {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: ($phi * 2fr) (1fr / $phi) ($phi * 1fr) ;
+    grid-template-rows: (1fr / $phi) ((1fr / $phi) / $phi) 1fr 1fr;
+    grid-gap: 2em;
     width: 100%;
     margin-bottom: 10rem;
   }
 
   .card {
-    &__description {
-      color: lighten($color: $black, $amount: 20);
-    }
-
-    &__info-container {
-      position: relative;
-      width: (100% - 100% / $phi);
-      min-width: 200px;
-
-      &:nth-of-type(odd) {padding-right: 1rem;}
-      &:nth-of-type(even) {padding-left: 1rem;}
-
-      &::before {
-        @include pseudo;
-        top: 3.2rem;
-        height: 5px;
-        width: 8px;
-        background: $grey;
-      }
-
-      &::after {
-        @include pseudo;
-        top: 3.2rem;
-        border-bottom: 1px solid $grey;
-      }
-    }
-
-    &__title {
-      margin: 0;
-    }
-  
-    &__languages {
-      display: flex;
-      margin-top: 15px;
-    }
-
-    &__repo {
-      @include fontSize(20);
-      // position: relative;
-      // left: 50%;
-      display: inline-block;
-      width: calc(50% - 1rem);
-      
-      text-align: center;
-      // transform: translateX(-50%);
-      &:first-of-type {margin-right: 1rem;}
-      i {transition: all 0.3s ease-in;}
-      &:hover i {color: $color1;}
-    }
-
     &__img-container {
+      grid-column: 1 / span 2;
+      grid-row: 1 / -1;
       position: relative;
-      width: (100% / $phi);
+      width: 100%;
       border: 1px solid $grey;
       transition: all 0.3s ease-in;
     
@@ -90,6 +43,86 @@
           background: $color1;
         }
       }
+    }
+
+    &__title {
+      grid-column: 2 / -1;
+      grid-row: 1;
+      align-self: flex-end;
+      margin: 0;
+      margin-left: 8px;
+      background: $white;
+
+      &::before, 
+      &::after {
+        @include pseudo;
+        top: 1.1em;
+        left: 3px;
+        z-index: 1;
+        background: $grey;
+      }
+
+      &::before {
+        height: 4px;
+        width: 8px;
+      }
+    
+      &::after {
+        height: 1px;
+        width: calc(100% - 3px);
+      }
+    }
+
+    &__languages {
+      // grid-column: 2 / -1;8978
+      display: flex;
+      margin-top: 15px;
+    }
+
+    &__description {
+      color: lighten($color: $black, $amount: 20);
+    }
+
+    // &__info-container {
+    //   position: relative;
+    //   width: (100% - 100% / $phi);
+    //   min-width: 200px;
+
+    //   &:nth-of-type(odd) {padding-right: 1rem;}
+    //   &:nth-of-type(even) {padding-left: 1rem;}
+
+    //   &::before {
+    //     @include pseudo;
+    //     top: 3.2rem;
+    //     height: 5px;
+    //     width: 8px;
+    //     background: $grey;
+    //   }
+
+    //   &::after {
+    //     @include pseudo;
+    //     top: 3.2rem;
+    //     border-bottom: 1px solid $grey;
+    //   }
+    // }
+
+    &__buttons {
+      grid-row: 4;
+      grid-column: 3 / -1;
+    }
+
+    &__repo {
+      @include fontSize(20);
+      // position: relative;
+      // left: 50%;
+      display: inline-block;
+      width: calc(50% - 1rem);
+      background: $white;
+      text-align: center;
+      // transform: translateX(-50%);
+      &:first-of-type {margin-right: 1rem;}
+      i {transition: all 0.3s ease-in;}
+      &::before {z-index: 1;}
     }
 
     &__img {
