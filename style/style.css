@@ -895,8 +895,8 @@ h3 {
   display: grid;
   -ms-grid-columns: 3.23607fr 0.61803fr 1.61803fr;
       grid-template-columns: 3.23607fr 0.61803fr 1.61803fr;
-  -ms-grid-rows: 0.61803fr 0.38197fr 1fr 1fr;
-      grid-template-rows: 0.61803fr 0.38197fr 1fr 1fr;
+  -ms-grid-rows: 0.61803fr 0.38197fr 1fr 0.5fr;
+      grid-template-rows: 0.61803fr 0.38197fr 1fr 0.5fr;
   grid-gap: 2em;
   width: 100%;
   margin-bottom: 10rem;
@@ -909,9 +909,6 @@ h3 {
   grid-row: 1 / -1;
   position: relative;
   width: 100%;
-  border: 1px solid #7c7c7c;
-  border-top: none;
-  border-left: none;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -932,38 +929,43 @@ h3 {
   transition: all 0.3s ease-in;
 }
 
-.projects .card__img-container::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  top: 2em;
-  left: 2em;
-  height: 100%;
-  width: 116.18034%;
-  border: 1px solid #7c7c7c;
-  border-right: none;
-  border-bottom: none;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-.projects .card__img-container:hover, .projects .card__img-container:focus-within {
-  border: 1px solid #55ccc0;
-  border-top: none;
-  border-left: none;
-}
-
 .projects .card__img-container:hover::before, .projects .card__img-container:focus-within::before {
   left: calc(116.18034% + 2em);
   background: #55ccc0;
 }
 
-.projects .card__img-container:hover::after, .projects .card__img-container:focus-within::after {
-  border: 1px solid #55ccc0;
-  border-right: none;
-  border-bottom: none;
+.projects .card__img-container:hover a::before, .projects .card__img-container:focus-within a::before {
+  border-top: 1px solid #55ccc0;
+  border-left: 1px solid #55ccc0;
+}
+
+.projects .card__img-container a {
+  display: block;
+  position: relative;
+}
+
+.projects .card__img-container a::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 1em;
+  left: 1em;
+  z-index: 1;
+  height: 100%;
+  width: 116.18034%;
+  border-top: 1px solid #7c7c7c;
+  border-left: 1px solid #7c7c7c;
+  background: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.projects .card__img {
+  width: 100%;
+  border-bottom: 1px solid #7c7c7c;
+  border-right: 1px solid #7c7c7c;
 }
 
 .projects .card__title {
@@ -1036,10 +1038,6 @@ h3 {
 
 .projects .card__repo::before {
   z-index: 1;
-}
-
-.projects .card__img {
-  width: 100%;
 }
 
 .tools {
