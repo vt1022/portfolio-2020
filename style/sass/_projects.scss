@@ -1,10 +1,11 @@
+$skillSize: 30px;
+
 .projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 8em;
 
   .skill {
-    height: 30px;
+    height: $skillSize;
     margin-right: 2rem;
     filter: saturate(0.7);
   }
@@ -16,7 +17,6 @@
     // grid-template-rows: (1fr / $phi) min-content 1fr min-content;
     grid-gap: 2em;
     width: 100%;
-    margin-bottom: 10rem;
   }
 
   .card {
@@ -26,39 +26,16 @@
       position: relative;
       width: 100%;
       transition: all 0.3s ease-in;
-    
-      &::before {
+    }
+
+    &__img-container-inner {
+      position: relative;
+      
+      &::after {
         @include pseudo;
-        top: 2em;
-        left: 2em;
-        height: 5px;
-        width: 8px;
-        z-index: 1;
-        background: $color2;
-        transition: all 0.3s ease-in;
-      }
-
-      &:hover, &:focus-within {
-        &::before {
-          left: calc(#{100% + $phi * 10} + 2em);
-          background: $color1;
-        }
-        a::before {
-          border-top: 1px solid $color1;
-          border-left: 1px solid $color1;
-        }
-      }
-
-      a {
-        display: block;
-        position: relative;
-      }
-
-      a::before {
-        @include pseudo;
+        background: red;
         top: 1em;
         left: 1em;
-        z-index: 1;
         height: 100%;
         width: (100% + $phi * 10);
         border-top: 1px solid $grey;
@@ -79,7 +56,6 @@
       grid-row: 1;
       align-self: flex-end;
       margin: 0;
-      margin-left: 8px;
       background: $white;
 
       &::before, 
@@ -103,37 +79,20 @@
     }
 
     &__languages {
-      // grid-column: 2 / -1;8978
-      display: flex;
-      margin-top: 15px;
+      @include flexCenter;
+      justify-content: start;
+      grid-column: 2 / -1;
+      grid-row: 2;
+      z-index: 1;
+      height: $skillSize + 8px;
+      padding: 3px 0;
+      padding-left: 3px;
+      background: $white;
     }
 
     &__description {
       color: lighten($color: $black, $amount: 20);
     }
-
-    // &__info-container {
-    //   position: relative;
-    //   width: (100% - 100% / $phi);
-    //   min-width: 200px;
-
-    //   &:nth-of-type(odd) {padding-right: 1rem;}
-    //   &:nth-of-type(even) {padding-left: 1rem;}
-
-    //   &::before {
-    //     @include pseudo;
-    //     top: 3.2rem;
-    //     height: 5px;
-    //     width: 8px;
-    //     background: $grey;
-    //   }
-
-    //   &::after {
-    //     @include pseudo;
-    //     top: 3.2rem;
-    //     border-bottom: 1px solid $grey;
-    //   }
-    // }
 
     &__buttons {
       grid-row: 4;

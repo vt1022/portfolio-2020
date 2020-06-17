@@ -873,14 +873,9 @@ h3 {
 }
 
 .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 8em;
 }
 
 .projects .skill {
@@ -899,7 +894,6 @@ h3 {
       grid-template-rows: 0.61803fr 0.38197fr 1fr 0.5fr;
   grid-gap: 2em;
   width: 100%;
-  margin-bottom: 10rem;
 }
 
 .projects .card__img-container {
@@ -913,46 +907,19 @@ h3 {
   transition: all 0.3s ease-in;
 }
 
-.projects .card__img-container::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  top: 2em;
-  left: 2em;
-  height: 5px;
-  width: 8px;
-  z-index: 1;
-  background: #8574CB;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-.projects .card__img-container:hover::before, .projects .card__img-container:focus-within::before {
-  left: calc(116.18034% + 2em);
-  background: #55ccc0;
-}
-
-.projects .card__img-container:hover a::before, .projects .card__img-container:focus-within a::before {
-  border-top: 1px solid #55ccc0;
-  border-left: 1px solid #55ccc0;
-}
-
-.projects .card__img-container a {
-  display: block;
+.projects .card__img-container-inner {
   position: relative;
 }
 
-.projects .card__img-container a::before {
+.projects .card__img-container-inner::after {
   position: absolute;
   content: '';
   top: 0;
   left: 0;
   width: 100%;
+  background: red;
   top: 1em;
   left: 1em;
-  z-index: 1;
   height: 100%;
   width: 116.18034%;
   border-top: 1px solid #7c7c7c;
@@ -975,7 +942,6 @@ h3 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0;
-  margin-left: 8px;
   background: #ffffff;
 }
 
@@ -1005,7 +971,23 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  grid-column: 2 / -1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  z-index: 1;
+  height: 38px;
+  padding: 3px 0;
+  padding-left: 3px;
+  background: #ffffff;
 }
 
 .projects .card__description {
