@@ -25,22 +25,47 @@
       position: relative;
       width: 100%;
       border: 1px solid $grey;
+      border-top: none;
+      border-left: none;
       transition: all 0.3s ease-in;
     
       &::before {
         @include pseudo;
+        top: 2em;
+        left: 2em;
         height: 5px;
         width: 8px;
-        background: $grey;
+        z-index: 1;
+        background: $color2;
+        transition: all 0.3s ease-in;
+      }
+      
+      &::after {
+        @include pseudo;
+        top: 2em;
+        left: 2em;
+        height: 100%;
+        width: (100% + $phi * 10);
+        border: 1px solid $grey;
+        border-right: none;
+        border-bottom: none;
         transition: all 0.3s ease-in;
       }
 
       &:hover, &:focus-within {
         border: 1px solid $color1;
+        border-top: none;
+        border-left: none;
 
         &::before {
-          left: calc(100% - 8px);
+          left: calc(#{100% + $phi * 10} + 2em);
           background: $color1;
+        }
+
+        &::after {
+          border: 1px solid $color1;
+          border-right: none;
+          border-bottom: none;
         }
       }
     }

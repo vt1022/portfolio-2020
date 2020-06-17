@@ -910,6 +910,8 @@ h3 {
   position: relative;
   width: 100%;
   border: 1px solid #7c7c7c;
+  border-top: none;
+  border-left: none;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -920,20 +922,48 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
+  top: 2em;
+  left: 2em;
   height: 5px;
   width: 8px;
-  background: #7c7c7c;
+  z-index: 1;
+  background: #8574CB;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.projects .card__img-container::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 2em;
+  left: 2em;
+  height: 100%;
+  width: 116.18034%;
+  border: 1px solid #7c7c7c;
+  border-right: none;
+  border-bottom: none;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 .projects .card__img-container:hover, .projects .card__img-container:focus-within {
   border: 1px solid #55ccc0;
+  border-top: none;
+  border-left: none;
 }
 
 .projects .card__img-container:hover::before, .projects .card__img-container:focus-within::before {
-  left: calc(100% - 8px);
+  left: calc(116.18034% + 2em);
   background: #55ccc0;
+}
+
+.projects .card__img-container:hover::after, .projects .card__img-container:focus-within::after {
+  border: 1px solid #55ccc0;
+  border-right: none;
+  border-bottom: none;
 }
 
 .projects .card__title {
