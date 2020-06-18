@@ -736,9 +736,11 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.9);
-  width: 100%;
-  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -826,9 +828,6 @@ h3 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
   grid-row: 1 / span 4;
-  border: 1px solid #7c7c7c;
-  border-top: none;
-  border-left: none;
 }
 
 .about__photo-container::after {
@@ -841,13 +840,14 @@ h3 {
   left: 2em;
   height: 100%;
   width: 161.8034%;
-  border: 1px solid #7c7c7c;
-  border-right: none;
-  border-bottom: none;
+  border-top: 1px solid #7c7c7c;
+  border-left: 1px solid #7c7c7c;
 }
 
 .about__photo {
   width: 100%;
+  border-right: 1px solid #7c7c7c;
+  border-bottom: 1px solid #7c7c7c;
 }
 
 .about__body {
@@ -1038,9 +1038,9 @@ h3 {
 .tools {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-auto-rows: 100px;
+  -ms-grid-columns: (minmax(110px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-auto-rows: 130px;
   grid-gap: 2em;
   justify-items: center;
   -webkit-box-align: center;
@@ -1264,12 +1264,33 @@ h3 {
 }
 
 .footer {
+  position: relative;
+  height: 61.8034vh;
+  background: url(../../assets/bg-footer.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.footer__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.footer .copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   padding: 6px 0;
   background: #262626;
   border-top: 1px solid #7c7c7c;
 }
 
-.footer .copyright {
+.footer .copyright__text {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: 'Khula', sans-serif;
@@ -1280,7 +1301,7 @@ h3 {
   margin: 3px 0 0 0;
 }
 
-.footer .copyright a {
+.footer .copyright__text a {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: 'Khula', sans-serif;
@@ -1289,11 +1310,11 @@ h3 {
   color: #55ccc0;
 }
 
-.footer .copyright a:hover {
+.footer .copyright__text a:hover {
   color: #ffffff;
 }
 
-.footer .copyright a::before {
+.footer .copyright__text a::before {
   z-index: 1;
 }
 
