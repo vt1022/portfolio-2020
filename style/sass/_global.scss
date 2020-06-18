@@ -18,7 +18,7 @@ button, .button {
   margin: 0;
 
   background: none;
-  text-transform: lowercase;
+  text-transform: uppercase;
   transition: all 0.3s ease-in;
 
   &::before {
@@ -102,6 +102,7 @@ h2, h3 {
 }
 
 h2 {
+  @include fontSize(50);
   font-weight: 700;
   letter-spacing: -0.05em;
 
@@ -123,6 +124,7 @@ h2 {
 }
 
 h3 {
+  color: $color2;
   text-transform: uppercase;
 }
 

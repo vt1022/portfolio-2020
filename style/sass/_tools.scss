@@ -1,11 +1,7 @@
 .tools-section {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.8), 
-      rgba(0, 0, 0, 0.98)), 
-    url(../../assets/rainbowvill.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .tools {
@@ -18,15 +14,15 @@
   margin-top: 20px;
 
   .skill {
-    height: 50px;
+    height: 70px;
     margin: 0 auto;
   }
 
   &__card {
     i {
-      @include fontSize(55);
+      @include fontSize(75);
       display: block;
-      height: 50px;
+      height: 70px;
       color: #40c2ff;
       text-align: center;
     }
