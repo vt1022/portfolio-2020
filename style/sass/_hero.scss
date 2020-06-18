@@ -2,7 +2,14 @@
   @include flexCenter;
   flex-direction: column;
   height: calc(100vh - 57px);
-  background: $black;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0.98)), 
+    url(../../assets/bg-hero.jpg);
+    // Photo by Andre Furtado on Unsplash
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   
   &__container {
     @include flexCenter;

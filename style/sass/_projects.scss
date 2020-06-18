@@ -34,8 +34,8 @@ $skillSize: 30px;
       &::after {
         @include pseudo;
         background: red;
-        top: 1em;
-        left: 1em;
+        top: 2em;
+        left: 2em;
         height: 100%;
         width: (100% + $phi * 10);
         border-top: 1px solid $grey;

@@ -1,3 +1,13 @@
+.tools-section {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0.98)), 
+    url(../../assets/rainbowvill.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
 .tools {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
