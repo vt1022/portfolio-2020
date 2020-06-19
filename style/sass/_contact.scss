@@ -1,10 +1,7 @@
 .contact {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5em;
+  grid-gap: 2em;
   padding: 0 2em;
 
   h2 {margin-top: 0;}
@@ -17,20 +14,23 @@
   }
 
   &__thanks {
-    // width: calc( 50% - 1rem);
     margin-bottom: 20px;
   }
 
   &__text {margin-top: 0;}
-  &__socials {display: flex;}
+  
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__socials__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 2rem;
-    padding-top: 5px;
+    margin-right: .5em;
+    padding-top: 0.28em;
     height: 60px;
     width: 60px;
     border: 1px solid $color2;
@@ -58,7 +58,6 @@
   }
 
   form {
-    // width: calc( 50% - 1rem);
     font-size: 0;
 
     > div {

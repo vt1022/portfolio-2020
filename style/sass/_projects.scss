@@ -13,8 +13,7 @@ $skillSize: 30px;
   &__card {
     display: grid;
     grid-template-columns: ($phi * 2fr) (1fr / $phi) ($phi * 1fr) ;
-    grid-template-rows: (1fr / $phi) ((1fr / $phi) / $phi) 1fr .5fr;
-    // grid-template-rows: (1fr / $phi) min-content 1fr min-content;
+    grid-template-rows: (1fr / $phi) min-content 1fr .5fr;
     grid-gap: 2em;
     width: 100%;
   }
@@ -90,27 +89,28 @@ $skillSize: 30px;
       padding-left: 3px;
       background: $white;
     }
-
+    
     &__description {
+      align-self: center;
+      margin: 0;
       color: lighten($color: $black, $amount: 20);
     }
 
     &__buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
       grid-row: 4;
       grid-column: 3 / -1;
     }
 
     &__repo {
       @include fontSize(20);
-      // position: relative;
-      // left: 50%;
-      display: inline-block;
-      width: calc(50% - 1rem);
+      display: block;
+      width: 100%;
+      height: min-content;
       background: $white;
       text-align: center;
-      // transform: translateX(-50%);
-      &:first-of-type {margin-right: 1rem;}
-      i {transition: all 0.3s ease-in;}
       &::before {z-index: 1;}
     }
   } //card

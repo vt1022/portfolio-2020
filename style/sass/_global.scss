@@ -9,11 +9,11 @@ ul, ol, li {
 }
 
 button, .button {
-  @include fontBody(19, 400, $color1);
+  @include fontBody(19, 600, $color1);
   position: relative;
 
   padding: 0;
-  padding-top: 4px;
+  padding-top: 6px;
   border: 1px solid $color2;
   margin: 0;
 
@@ -33,7 +33,7 @@ button, .button {
 
   &:hover, &:focus, &:focus-within {
     border: 1px solid $color1;
-    color: $black;
+    color: $grey;
     outline: none;
 
     &::before {
@@ -131,6 +131,6 @@ h3 {
 
 .wrapper {
   max-width: 1200px;
-  width: 95%;
+  width: 75%;
   margin: 0 auto;
 }

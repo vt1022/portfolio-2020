@@ -3,6 +3,7 @@
   grid-template-columns: ($phi * 1fr) (1fr / $phi) ($phi * 2fr);
   grid-template-rows: (1fr / $phi) ((1fr / $phi) / $phi) 1fr 1fr;
   grid-gap: 2em;
+  padding-top: 50px;
 }
 
 .about {
@@ -35,6 +36,8 @@
   
   &__photo {
     width: 100%;
+    padding-top: 2em;
+    padding-left: 2em;
     border-right: 1px solid $grey;
     border-bottom: 1px solid $grey;
   } 
@@ -63,5 +66,7 @@
     display: inline-block;
     width: 100% / $phi;
     text-align: center;
+
+    &::before{z-index: 1;}
   }
 }

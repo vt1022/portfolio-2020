@@ -72,8 +72,7 @@ vt.textAnimation = function() {
 }
 
 vt.init = function() {
-  // load particles-js:
-  particlesJS.load('particles-js', './assets/particlesjs-config.json');
+  console.log('Hi there, hire me =)');
   vt.textAnimation(); // code by https://codepen.io/gschier/pen/jkivt
   vt.navBar();
   // remove focus on mouseleave:

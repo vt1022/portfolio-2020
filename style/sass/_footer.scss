@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  height: (100vh / $phi);
+  height: (80vh / $phi);
   background: url(../../assets/bg-footer.jpg);
     // Photo by Puk Patrick on Unsplash
   background-size: cover;
@@ -8,13 +8,33 @@
   background-attachment: fixed;
 
   &__overlay {
+    @include flexCenter();
+    flex-direction: column;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .8);
   }
+  
+  &__greeting {
+    @include fontSize(24);
+    margin: 0;
+    color: $white;
+    line-height: 1em;
+  }
+  
+  &__thank {
+    @include fontLogo(60, 600, $color1);
+    margin: 0;
+    line-height: 0.8em;
+    text-align: center;
+    text-transform: uppercase;
+    &::before, &::after { content: none; }
+  }
+
+  &__you { color: $color2; }
 
   .copyright {
     position: absolute;
