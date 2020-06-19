@@ -1,7 +1,11 @@
 .contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5em;
+  padding: 0 2em;
 
   h2 {margin-top: 0;}
 
@@ -13,7 +17,7 @@
   }
 
   &__thanks {
-    width: calc( 50% - 1rem);
+    // width: calc( 50% - 1rem);
     margin-bottom: 20px;
   }
 
@@ -54,7 +58,7 @@
   }
 
   form {
-    width: calc( 50% - 1rem);
+    // width: calc( 50% - 1rem);
     font-size: 0;
 
     > div {
